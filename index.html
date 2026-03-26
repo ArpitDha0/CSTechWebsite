@@ -82,9 +82,9 @@
 
     <!-- Header 
     ============================================= -->
-    <header id="home">
+    <header id="home" style="background: #fff !important;">
         <!-- Start Navigation -->
-        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background">
+        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background" style="background: #fff !important;">
 
             <div class="container d-flex justify-content-between align-items-center">            
                 <!-- Start Header Navigation -->
@@ -101,7 +101,6 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-
                     <div class="collapse-header">
                         <img src="assets/img/logo.png" alt="Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -118,22 +117,34 @@
                             <a href="/about.html" >About</a>
                         </li>
                         <li class="dropdown">
-                            
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Products</a>
+                            <a href="/products.html" class="dropdown-toggle" data-toggle="dropdown" >Products</a>
                             <ul class="dropdown-menu">
-                               <li><a href="/products.html?alpha-geo-L300">DGPS</a></li>
-                                <li><a href="/products.html?alpha-x">Total Station</a></li>
-                                <li><a href="/products.html?sokkia-B40A">Auto Level</a></li>
+                                <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers & Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <!-- <li><a href="/products.html?scanners">3D Scanners</a></li> -->
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <!-- <li><a href="/products.html?software">Software</a></li> -->
+                                <li><a href="/products.html?accessories">Accessories</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="/products.html?accessories" >Accessories</a>
+                       <li class="dropdown">
+                            <a href="/industries.html" class="dropdown-toggle" data-toggle="dropdown" >Industries</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/industries.html#surveying-engineering">Surveying & Engineering</a></li>
+                                <li><a href="/industries.html#geographic-information-system">Geographic Information System</a></li>
+                                <li><a href="/industries.html#3d-scanning-mapping">3D Scanning Mapping</a></li>
+                                <li><a href="/industries.html#monitoring">Monitoring</a></li>
+                            </ul>
                         </li>
                         <li class="dropdown">
                             <a href="/contact.html" >Contact</a>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
             </div>   
             <!-- Overlay screen for menu -->
             <div class="overlay-screen"></div>
@@ -145,38 +156,12 @@
 
    <!-- Start Banner 
     ============================================= -->
-    <div class="banner-area banner-style-eleven shape center-item text-color">
-        <div class="item">
-            <div class="container">
-                <div class="row align-center">
-                                    
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <h2 class="wow fadeInDown">Sustainable, Innovative & Customised <strong>solutions</strong></h2>
-                            <p class="wow fadeInLeft">
-                                Integrating AI to automate the <strong>CIVIL & ENVIRONMENTAL</strong> problems
-                            </p>
-                            <div class="bottom" hidden>
-                                <div class="call-us wow fadeInLeft">
-                                    <div class="icon">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <div class="info">
-                                        <h5>(+3454) 123 7890</h5>
-                                        <span>Call for any question</span>
-                                    </div>
+    
+								<div style="background-size: cover; background-repeat: no-repeat;">
+                                    <div class="banner-video-box" >
+                                    <video style="width: 100%;" autoplay src="assets/img/banner-1.mp4" poster="" class="video-obj" muted="" x5-video-player-type="h5-page" playsinline=""></video>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 thumb">
-                        <img class="wow fadeInUp" src="assets/img/landingimg2wobg.png" alt="Thumb">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+                                </div>
     <!-- End Banner -->
 
     <!-- Star Featured Services Area
@@ -276,8 +261,8 @@
             <div class="row align-center">
                 <div class="col-lg-6">
                     <div class="thumb">
-                        <img src="assets/img/product-jpeg-1000x1000.webp" alt="Thumb">
-                        <img src="assets/img/drone-agr.png" alt="Thumb">
+                        <img src="assets/img/3d-scanning-mapping.jpg" alt="Thumb">
+                        <img src="assets/img/whychoose2.jpg" alt="Thumb">
                         <!-- <img src="assets/img/abt1.png" alt="Thumb"> -->
                         <!-- <div class="overlay">
                             <div class="content">
@@ -331,41 +316,84 @@
             <div class="owl-stage-outer">
                 <div class="owl-stage" style="transform: translate3d(-884px, 0px, 0px); transition: 0.25s; width: 2210px;"><div class="owl-item" style="width: 412px; margin-right: 30px;"><div class="item">
                     <div class="icon">
-                        <img src="assets/img/products/dgps/L300-1.png" alt="Icon">
+                        <img src="assets/img/products/gnss/ap20/ap20-gnss-receiver-1_thumbW360.png" alt="Icon">
                     </div>
                     <div class="info">
                         <h4>GNSS Receivers</h4>
-                        <a href="products.html?alpha-geo-L300">View More <i class="fas fa-angle-right"></i></a>
+                        <a href="products.html?gnss_receiver">View More <i class="fas fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="owl-item" style="width: 412px; margin-right: 30px;"><div class="item">
                     <div class="icon">
-                        <img src="assets/img/products/total_station/alpha-x-1.jpg" alt="Icon">
+                        <img src="assets/img/products/total_station/am02/totalStationmain.jpg" alt="Icon">
                     </div>
                     <div class="info">
                         <h4>Total Stations</h4>
-                        <a href="products.html?alpha-x">View More <i class="fas fa-angle-right"></i></a>
+                        <a href="products.html?total_station">View More <i class="fas fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
                     <div class="icon">
-                        <img src="assets/img/products/auto_level/Sokkia-b40-1.jpg" alt="Icon">
+                        <img src="assets/img/products/tablets/ts8i_5g/ts8i-5g-rugged-professional-android-table_thumbW360.png" alt="Icon">
                     </div>
                     <div class="info">
-                        <h4>Auto Levels</h4>
-                        <a href="products.html?sokkia-B40A">View More <i class="fas fa-angle-right"></i></a>
+                        <h4>Controller & Tablets</h4>
+                        <a href="products.html?controllers_and_tablets">View More <i class="fas fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
                     <div class="icon">
-                        <img src="assets/img/products/accessories/Tribrach.avif" alt="Icon">
+                        <img src="assets/img/products/sensors/m66UGH/26-1_thumbW360.jpg" alt="Icon">
+                    </div>
+                    <div class="info">
+                        <h4>GNSS Sensors</h4>
+                        <a href="products.html?gnss_sensor">View More <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
+                    <div class="icon">
+                        <img src="assets/img/products/antennas/tca920/2-3_thumbW360.jpg" alt="Icon">
+                    </div>
+                    <div class="info">
+                        <h4>GNSS Antennas</h4>
+                        <a href="products.html?gnss_antennas">View More <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
+                    <div class="icon">
+                        <img src="assets/img/products/optics/sokkia_b40/3_thumbW360.jpg" alt="Icon">
+                    </div>
+                    <div class="info">
+                        <h4>Optics</h4>
+                        <a href="products.html?optics">View More <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
+                    <div class="icon">
+                        <img src="assets/img/products/datalink/adl35/adl35-high-power-external-radio-for-surveying_thumbW360.png" alt="Icon">
+                    </div>
+                    <div class="info">
+                        <h4>Data Link</h4>
+                        <a href="products.html?datalink">View More <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
+                    <div class="icon">
+                        <img src="assets/img/products/accessories/topcon_prism/18-1_thumbW360.jpg" alt="Icon">
                     </div>
                     <div class="info">
                         <h4>Accessories</h4>
-                        <a href="#">View More <i class="fas fa-angle-right"></i></a>
+                        <a href="products.html?accessories">View More <i class="fas fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -389,7 +417,6 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <!-- <img src="https://validthemes.net/site-template/techa/assets/img/logo-light.png" alt="Logo"> -->
                              <h3>CSTECH SURVEY & CO.</h3>
                             <p>
                                 Established to offer wide range of consulting services with necessary tools & expertise to scale your business
@@ -410,7 +437,7 @@
                                     <a href="products.html">Products</a>
                                 </li>
                                 <li>
-                                    <a href="products.html?accessories">Accessories</a>
+                                    <a href="industries.html">Industries</a>
                                 </li>
                                 <li>
                                     <a href="contact.html">Contact Us</a>
@@ -420,16 +447,28 @@
                     </div>
                     <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
-                            <h4 class="widget-title">Solutions</h4>
+                            <h4 class="widget-title">Products</h4>
                             <ul>
                                 <li>
-                                    <a href="/products.html?alpha-geo-L300">DGPS</a>
+                                    <a href="/products.html?gnss_receiver">GNSS</a>
                                 </li>
                                 <li>
-                                    <a href="/products.html?alpha-x">Total Station</a>
+                                    <a href="/products.html?total_station">Total Station</a>
                                 </li>
                                 <li>
-                                    <a href="/products.html?sokkia-B40A">Auto Level</a>
+                                    <a href="/products.html?controllers_and_tablets">Controllers & Tablets</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?gnss_sensor">GNSS Sensors</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?gnss_antennas">GNSS Antennas</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?optics">Optics</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?datalink">Datalink</a>
                                 </li>
                                 <li>
                                     <a href="/products.html?accessories">Accessories</a>

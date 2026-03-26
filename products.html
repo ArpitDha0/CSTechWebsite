@@ -29,6 +29,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- ========== End Stylesheet ========== -->
 
     <!--[if lte IE 9]>
@@ -87,11 +88,11 @@
 
     <!-- Header 
     ============================================= -->
-     <header id="home">
+    <header id="home" style="background: #fff !important;">
         <!-- Start Navigation -->
-        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs on menu-center no-full">
+        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background" style="background: #fff !important;">
 
-           <div class="container d-flex justify-content-between align-items-center">            
+            <div class="container d-flex justify-content-between align-items-center">            
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -106,7 +107,6 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-
                     <div class="collapse-header">
                         <img src="assets/img/logo.png" alt="Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -123,22 +123,34 @@
                             <a href="/about.html" >About</a>
                         </li>
                         <li class="dropdown">
-                            
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Products</a>
+                            <a href="/products.html" class="dropdown-toggle" data-toggle="dropdown" >Products</a>
                             <ul class="dropdown-menu">
-                               <li><a href="/products.html?alpha-geo-L300">DGPS</a></li>
-                                <li><a href="/products.html?alpha-x">Total Station</a></li>
-                                <li><a href="/products.html?sokkia-B40A">Auto Level</a></li>
+                                <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers & Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <!-- <li><a href="/products.html?scanners">3D Scanners</a></li> -->
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <!-- <li><a href="/products.html?software">Software</a></li> -->
+                                <li><a href="/products.html?accessories">Accessories</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="/products.html?accessories" >Accessories</a>
+                       <li class="dropdown">
+                            <a href="/industries.html" class="dropdown-toggle" data-toggle="dropdown" >Industries</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/industries.html#surveying-engineering">Surveying & Engineering</a></li>
+                                <li><a href="/industries.html#geographic-information-system">Geographic Information System</a></li>
+                                <li><a href="/industries.html#3d-scanning-mapping">3D Scanning Mapping</a></li>
+                                <li><a href="/industries.html#monitoring">Monitoring</a></li>
+                            </ul>
                         </li>
                         <li class="dropdown">
                             <a href="/contact.html" >Contact</a>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
             </div>   
             <!-- Overlay screen for menu -->
             <div class="overlay-screen"></div>
@@ -148,71 +160,295 @@
     </header>
     <!-- End Header -->
 
-    <div class="breadcrumb-area shadow theme bg-fixed text-light" style="background-image: url(assets/img/surveyor-engineer.avif);">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-6">
-                    <h2 id="main-heading">Product</h2>
-                </div>
-            </div>
+    <section class="section-breadcrumb-wrap-block section-block-demo1-breadcrumb3" data-screen="screen-large" id="sectionIdtx8wb1u" blog_category_custom_breadcrumb="">
+        <div class="page-title-bar">
+        <img class="page-banner" src="assets/img/product_banner.jpg" alt="product_banner" itemprop="image" data-source="custom"><div class="content-box">
         </div>
+      </div>
+    </section>
+
+ <style>
+    .sidebar {
+      background: white;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+    }
+
+    .sidebar h5 {
+      background: #0b7285;
+      color: white;
+      padding: 10px;
+    }
+
+    .category {
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 4px;
+    }
+
+    .category:hover {
+      background: #e9ecef;
+    }
+
+    .active-category {
+      color: #0b7285;
+      font-weight: bold;
+    }
+
+    .product-card {
+  background: white;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative; /* needed for overlay */
+  cursor: pointer;
+}
+
+/* IMAGE */
+.product-card img {
+  max-width: 100%;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* ZOOM */
+.product-card:hover img {
+  transform: scale(1.2);
+}
+
+/* GREY OVERLAY */
+.product-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); /* grey shade */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 6px;
+}
+
+/* SHOW OVERLAY ON HOVER */
+.product-card:hover::after {
+  opacity: 1;
+}
+
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Hide sidebar on mobile */
+    @media (max-width: 992px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+ 
+  </style>
+
+  <div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <div class="col-lg-3 sidebar">
+      <h5>Products Categories</h5>
+      
+      <div class="category active-category" data-category="gnss_receiver">GNSS Receiver</div>
+      <div class="category" data-category="total_station">Total Station</div>
+      <div class="category" data-category="controllers_and_tablets">Controllers & Tablets</div>
+      <div class="category" data-category="gnss_sensor">GNSS Sensors</div>
+      <div class="category" data-category="gnss_antennas">GNSS Antennas</div>
+      <!-- <div class="category" data-category="scanners">3D Scanners</div> -->
+      <div class="category" data-category="optics">Optics</div>
+      <div class="category" data-category="datalink">Datalink</div>
+      <!-- <div class="category" data-category="software">Software</div> -->
+      <div class="category" data-category="accessories">Accessories</div>
     </div>
 
-    <div class="services-details-area default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 content">
-                    <!-- <div class="thumb">
-                        <img src="https://validthemes.net/site-template/techa/assets/img/banner/7.jpg" alt="Thumb">
-                    </div> -->
-                    <div class="slideshow-container thumb" id="slideshow-container"></div>
-                    <h2 id="prod-heading" style="padding-top: 25px;">Product</h2>
-                    <p id="prod-overview"></p>
-                    <div id="alldetails"></div>
-                </div>
-                <div class="col-lg-4 sidebar">
-                    <div class="sidebar-item link">
-                        <ul>
-                            <li><a id="alpha-geo-L300-sidebar" href="?alpha-geo-L300">Alpha Geo L300 GNSS Receiver</a></li>
-                            <li><a id="matrix-2-lite-sidebar" href="?matrix-2-lite">Matrix II Lite GNSS Receiver</a></li>
-                            <li><a id="matrix-2-laser-sidebar" href="?matrix-2-laser">Matrix II Laser GNSS Receiver</a></li>
-                            <li><a id="matrix-ultra-sidebar" href="?matrix-ultra">Metrix Ultra GNSS Receiver</a></li>
-                            <li><a id="alpha-x-sidebar" href="?alpha-x">Alpha X Total Station</a></li>
-                            <li><a id="alpha-y-sidebar" href="?alpha-y">Alpha Y Total Station</a></li>
-                            <li><a id="sokkia-B40A-sidebar" href="?sokkia-B40A">Sokia B40A Auto Level</a></li>
-                            <li><a id="sokkia-B40-sidebar" href="?sokkia-B40">Sokia B40 Auto Level</a></li>
-                            <li><a id="accessories-sidebar" href="?accessories">Accessories</a></li>
-                            <!-- <li><a id="carbon-pole-sidebar" href="?carbon-pole">Carbon Pole</a></li>
-                            <li><a id="tribrach-sidebar" href="?tribrach">Tribrach</a></li>
-                            <li><a id="red-and-white-pole-sidebar" href="?red-and-white-pole">Red and White Pole</a></li>
-                            <li><a id="prism-sidebar" href="?prism">Prism</a></li>
-                            <li><a id="mini-prism-sidebar" href="?mini-prism">Mini Prism</a></li>
-                            <li><a id="aluminium-tripod-sidebar" href="?aluminium-tripod">Aluminium Tripod</a></li> -->
-                        </ul>
-                    </div>
-                    <div class="sidebar-item banner">
-                        <div class="thumb">
-                            <img src="assets/img/contact-prod.jpg" alt="Thumb">
-                            <div class="content">
-                                <h5>For More Details</h5>
-                                <h3><i class="fas fa-phone"></i> +011-43004722</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebar-item brochure" hidden>
-                        <div class="title">
-                            <h4>Brochure</h4>
-                        </div>
-                        <p>
-                            Existence its certainly explained how improving household pretended.
-                        </p>
-                        <a href="#"><i class="fas fa-file-pdf"></i> Download Service</a>
-                        <a href="#"><i class="fas fa-file-archive"></i> Download Features</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Products -->
+    <div class="col-lg-9 col-12 p-4">
+      <div class="title">GNSS Receiver</div>
+      <div class="row" id="product-container"></div>
     </div>
+
+  </div>
+</div>
+
+<script>
+  const products = {
+    gnss_receiver: [
+      { name: "AP20 GNSS Receiver", img: "/assets/img/products/gnss/ap20/ap20-gnss-receiver-1_thumbW360.png", link:"/products/ap20-gnss-receiver.html" },
+      { name: "AP20AR GNSS Receiver", img: "/assets/img/products/gnss/ap20ar/ap20ar.jpg", link: "/products/ap20ar-gnss-receiver.html" },
+      { name: "AP40Laser+ GNSS Receiver", img: "/assets/img/products/gnss/ap40/ap40laser-gnss-receiver-1_thumbW360.png", link: "/products/ap40laser-gnss-receiver.html" },
+      { name: "AP60Vision GNSS Receiver", img: "/assets/img/products/gnss/ap60/ap60vision-gnss-receiver-1_thumbW360.png", link: "/products/ap60vision-gnss-receiver.html" },
+      { name: "Max5 Base GNSS Receiver", img: "/assets/img/products/gnss/max5/max5-base-gnss-receiver_thumbW360.png", link: "/products/max5-base-gnss-receiver.html" },
+      { name: "AP10 GNSS Receiver", img: "/assets/img/products/gnss/ap10/ap10-1_thumbW360.png", link: "/products/ap10-gnss-receiver.html" },
+      { name: "AP30Laser GNSS Receiver", img: "/assets/img/products/gnss/ap30/gnss-receiver-1-1_thumbW360.png", link: "/products/ap30-gnss-receiver.html" },
+      { name: "AP50Vision GNSS Receiver", img: "/assets/img/products/gnss/ap50/ap50-1_thumbW360.png", link: "/products/ap50vision-gnss-receiver.html" },
+    ],
+    total_station: [
+      { name: "AM02 Total Station", img: "/assets/img/products/total_station/am02/totalStationmain.jpg", link: "/products/am02.html" },
+    ],
+    controllers_and_tablets: [
+      { name: "TS8i 5G Android Tablet", img: "/assets/img/products/tablets/ts8i_5g/ts8i-5g-rugged-professional-android-table_thumbW360.png", link: "javascript:void(0)" },
+      { name: "TS8i Pro Tablet with GNSS", img: "/assets/img/products/tablets/ts8i_pro/ts8i-pro-rugged-tablet-with-gnss-rtk-positioning_thumbW360.png", link: "javascript:void(0)" },
+      { name: "CS5i Pro", img: "/assets/img/products/tablets/cs5i_pro/32c0e25961f88acec455d7064ec0475c_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "CS5i Data Collector", img: "/assets/img/products/tablets/cs5i_data/88073fcc-681d-4f3a-8cb8-9f33fcc4de47_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "CS3i Data Collector", img: "/assets/img/products/tablets/cs3i_data/cs3i-rugged-data-controller_thumbW360.png", link: "javascript:void(0)" },
+    ],
+    gnss_sensor: [
+      { name: "M66UGH-Lite", img: "/assets/img/products/sensors/m66UGH/26-1_thumbW360.jpg", link: "javascript:void(0)" },
+    ],
+    gnss_antennas: [
+      { name: "TCA920 Choke Ring Antenna", img: "/assets/img/products/antennas/tca920/2-3_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "TCA930 Choke Ring Antenna", img: "/assets/img/products/antennas/tca930/2-4_thumbW360.jpg", link: "javascript:void(0)" }
+    ],
+    scanners: [
+      
+    ],
+    optics: [
+      { name: "AM02 Total Station", img: "/assets/img/products/total_station/am02/totalStationmain.jpg", link: "javascript:void(0)" },
+      { name: "Leica TS07", img: "/assets/img/products/optics/leica_ts07/6_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Leica TS03", img: "/assets/img/products/optics/leica_ts03/5_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Sokkia IM52", img: "/assets/img/products/optics/sokkia_im52/14-1_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Topcon GM52", img: "/assets/img/products/optics/topcon_gm52/13-1_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Leica NA532 Series", img: "/assets/img/products/optics/leica_na532/11-1_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Leica NA300 Series", img: "/assets/img/products/optics/leica_na300/7_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Sokkia B40", img: "/assets/img/products/optics/sokkia_b40/3_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Topcon AT-B4", img: "/assets/img/products/optics/topcon_atb4/2-6_thumbW360.jpg", link: "javascript:void(0)" },
+    ],
+    datalink: [
+      { name: "ADL35 External Radio", img: "/assets/img/products/datalink/adl35/adl35-high-power-external-radio-for-surveying_thumbW360.png", link: "javascript:void(0)" }
+    ],
+    software: [
+      { name: "ApekSurv", img:  "javascript:void(0)", link: "javascript:void(0)" }
+    ],
+    accessories: [
+      { name: "AT60W", img: "assets/img/products/accessories/at60w/4-3_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "AT40L", img: "assets/img/products/accessories/at40l/8_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Apeks Tribrach", img: "assets/img/products/accessories/tribrach/1-13_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Leica GPR111", img: "assets/img/products/accessories/leica_gpr111/12-1_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Leica GPR121", img: "assets/img/products/accessories/leica_gpr121/17-1_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Topcon Prism", img: "assets/img/products/accessories/topcon_prism/18-1_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "Leica GPM111", img: "assets/img/products/accessories/leica_gmp111/1-8_thumbW360.jpg", link: "javascript:void(0)" },
+      { name: "APEKS 2.5M pole", img: "assets/img/products/accessories/apeks_pole", link: "javascript:void(0)" }
+    ]
+  };
+
+  let prod = window.location.search.substring(1);
+ if(!prod)
+    prod = 'gnss_receiver';
+
+  function loadProducts(category) {
+    let html = "";
+    products[category].forEach(product => {
+      html += `
+        <div class="col-lg-3 col-md-4 col-6 mb-4">
+          <a href="${product.link}">
+            <div class="product-card">
+              <img src="${product.img}">
+            <p class="mb-2 mt-2">${product.name}</p>
+              </div>
+          </a>
+        </div>
+      `;
+    });
+
+    $("#product-container").html(html);
+    $(".title").text($(`.category[data-category='${category}']`).text());
+  }
+
+  function loadAllProducts() {
+    let html = "";
+
+    Object.keys(products).forEach(cat => {
+      products[cat].forEach(product => {
+        html += `
+          <div class="col-lg-3 col-md-6 col-12 mb-4" id="cat-${cat}">
+            <div class="form-group">
+            <div class="product-card">
+              <img src="${product.img}">
+              <p class="mt-2">${product.name}</p>
+            </div>
+            </div>
+          </div>
+        `;
+      });
+    });
+
+    $("#product-container").html(html);
+    $(".title").text("All Products");
+  }
+
+  function checkScreen() {
+    if ($(window).width() <= 992) {
+      loadAllProducts();
+      
+       // scroll after DOM render
+    //setTimeout(() => {
+     // scrollToCategory(prod);
+    //}, 200);
+    } else {
+      loadProducts(prod);
+    }
+  }
+
+  // Initial load
+ setActiveCategory(prod);
+checkScreen();
+
+  // Resize handling
+  $(window).resize(function () {
+    checkScreen();
+  });
+
+  // Sidebar click (desktop only)
+  $(".category").click(function () {
+    if ($(window).width() > 992) {
+      $(".category").removeClass("active-category");
+      $(this).addClass("active-category");
+
+      const category = $(this).data("category");
+      history.pushState(null, "", `?${category}`);
+      loadProducts(category);
+    }
+  });
+
+  function setActiveCategory(category) {
+  $(".category").removeClass("active-category");
+
+  const activeEl = $(`.category[data-category='${category}']`);
+
+  if (activeEl.length) {
+    activeEl.addClass("active-category");
+    $(".title").text(activeEl.text());
+  } else {
+    // fallback if category not found
+    $(".category[data-category='gnss']").addClass("active-category");
+  }
+}
+
+function scrollToCategory(category) {
+  const target = $("#cat-" + category);
+
+  if (target.length) {
+    $("html, body").animate({
+      scrollTop: target.offset().top - 80
+    }, 600);
+  }
+}
+</script>
+
+
 
     <!-- Start Footer 
     ============================================= -->
@@ -227,7 +463,6 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <!-- <img src="https://validthemes.net/site-template/techa/assets/img/logo-light.png" alt="Logo"> -->
                              <h3>CSTECH SURVEY & CO.</h3>
                             <p>
                                 Established to offer wide range of consulting services with necessary tools & expertise to scale your business
@@ -248,7 +483,7 @@
                                     <a href="products.html">Products</a>
                                 </li>
                                 <li>
-                                    <a href="products.html?accessories">Accessories</a>
+                                    <a href="industries.html">Industries</a>
                                 </li>
                                 <li>
                                     <a href="contact.html">Contact Us</a>
@@ -258,16 +493,28 @@
                     </div>
                     <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
-                            <h4 class="widget-title">Solutions</h4>
+                            <h4 class="widget-title">Products</h4>
                             <ul>
                                 <li>
-                                    <a href="/products.html?alpha-geo-L300">DGPS</a>
+                                    <a href="/products.html?gnss_receiver">GNSS</a>
                                 </li>
                                 <li>
-                                    <a href="/products.html?alpha-x">Total Station</a>
+                                    <a href="/products.html?total_station">Total Station</a>
                                 </li>
                                 <li>
-                                    <a href="/products.html?sokkia-B40A">Auto Level</a>
+                                    <a href="/products.html?controllers_and_tablets">Controllers & Tablets</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?gnss_sensor">GNSS Sensors</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?gnss_antennas">GNSS Antennas</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?optics">Optics</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?datalink">Datalink</a>
                                 </li>
                                 <li>
                                     <a href="/products.html?accessories">Accessories</a>
@@ -318,8 +565,8 @@
     </footer>
     <!-- End Footer -->
 
-  <script src="assets/js/products.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <!-- <script src="assets/js/products.js"></script> -->
+    
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>

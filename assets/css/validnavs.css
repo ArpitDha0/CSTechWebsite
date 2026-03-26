@@ -1213,7 +1213,7 @@ nav.navbar.validnavs.navbar-fixed.nav-box {
 
 nav.navbar.validnavs.navbar-fixed.no-background {
 	display: block;
-	position: absolute;
+	/* position: absolute; */
 	width: 100%;
 	z-index: 100;
 	box-shadow: 0 8px 25px 0 rgb(0 0 0 / 4%);
@@ -1518,7 +1518,7 @@ nav.navbar.validnavs.brand-center {
 	}
 
 	nav.navbar.validnavs.navbar-fixed {
-		position: absolute;
+		/* position: absolute; */
 		background: transparent;
 		box-shadow: none;
 	}

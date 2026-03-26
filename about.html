@@ -87,11 +87,11 @@
 
     <!-- Header 
     ============================================= -->
-    <header id="home">
+    <header id="home" style="background: #fff !important;">
         <!-- Start Navigation -->
-        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs on menu-center no-full">
+        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background" style="background: #fff !important;">
 
-             <div class="container d-flex justify-content-between align-items-center">            
+            <div class="container d-flex justify-content-between align-items-center">            
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -106,7 +106,6 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-
                     <div class="collapse-header">
                         <img src="assets/img/logo.png" alt="Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -123,23 +122,35 @@
                             <a href="/about.html" >About</a>
                         </li>
                         <li class="dropdown">
-                            
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Products</a>
+                            <a href="/products.html" class="dropdown-toggle" data-toggle="dropdown" >Products</a>
                             <ul class="dropdown-menu">
-                               <li><a href="/products.html?alpha-geo-L300">DGPS</a></li>
-                                <li><a href="/products.html?alpha-x">Total Station</a></li>
-                                <li><a href="/products.html?sokkia-B40A">Auto Level</a></li>
+                                <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers & Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <!-- <li><a href="/products.html?scanners">3D Scanners</a></li> -->
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <!-- <li><a href="/products.html?software">Software</a></li> -->
+                                <li><a href="/products.html?accessories">Accessories</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="/products.html?accessories" >Accessories</a>
+                       <li class="dropdown">
+                            <a href="/industries.html" class="dropdown-toggle" data-toggle="dropdown" >Industries</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/industries.html#surveying-engineering">Surveying & Engineering</a></li>
+                                <li><a href="/industries.html#geographic-information-system">Geographic Information System</a></li>
+                                <li><a href="/industries.html#3d-scanning-mapping">3D Scanning Mapping</a></li>
+                                <li><a href="/industries.html#monitoring">Monitoring</a></li>
+                            </ul>
                         </li>
                         <li class="dropdown">
                             <a href="/contact.html" >Contact</a>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
-            </div>  
+                </div>
+            </div>   
             <!-- Overlay screen for menu -->
             <div class="overlay-screen"></div>
             <!-- End Overlay screen for menu -->
@@ -148,15 +159,80 @@
     </header>
     <!-- End Header -->
 
-    <div class="breadcrumb-area shadow theme bg-fixed text-light theme-prim" style="background-image: url(assets/img/man-working.jpg);">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-6">
-                    <h2>About Us</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+        <div class="page-title-bar">
+        <img class="page-banner" src="assets/img/company-1.jpg" alt="product_banner" itemprop="image" data-source="custom">
+        <div class="banner-text">
+    <h1>About Us</h1>
+  </div>
+      </div>
+
+      <style>
+        /* Banner container */
+.page-title-bar {
+  width: 100%;
+  height: 300px; /* fixed height */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner image */
+.page-title-bar img.page-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay text */
+.page-title-bar .banner-text {
+  position: absolute;
+  top: 50%;          /* vertical center */
+  left: 10%;       
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white !important;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Heading & paragraph */
+.page-title-bar .banner-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.page-title-bar .banner-text p {
+  font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .page-title-bar {
+    height: 220px;
+  }
+  .page-title-bar .banner-text h1 {
+    font-size: 28px;
+  }
+  .page-title-bar .banner-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title-bar {
+    height: 160px;
+  }
+  .page-title-bar .banner-text h1 {
+    font-size: 22px;
+  }
+  .page-title-bar .banner-text{
+    left: 20%;
+  }
+  .page-title-bar .banner-text p {
+    font-size: 14px;
+  }
+}
+      </style>
 
     <div class="about-area inc-shape default-padding">
         <div class="container">
@@ -269,7 +345,7 @@
 
     <!-- Start Footer 
     ============================================= -->
-     <footer class="bg-dark text-light" style="margin-top: 100px; margin-bottom: -120px;">
+    <footer class="bg-dark text-light" style="margin-top: 100px; margin-bottom: -120px;">
         <!-- Fixed Shape -->
         <div class="fixed-shape">
             <img src="assets/img/footermap.svg" alt="Shape">
@@ -280,7 +356,6 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <!-- <img src="https://validthemes.net/site-template/techa/assets/img/logo-light.png" alt="Logo"> -->
                              <h3>CSTECH SURVEY & CO.</h3>
                             <p>
                                 Established to offer wide range of consulting services with necessary tools & expertise to scale your business
@@ -301,7 +376,7 @@
                                     <a href="products.html">Products</a>
                                 </li>
                                 <li>
-                                    <a href="products.html?accessories">Accessories</a>
+                                    <a href="industries.html">Industries</a>
                                 </li>
                                 <li>
                                     <a href="contact.html">Contact Us</a>
@@ -311,16 +386,28 @@
                     </div>
                     <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
-                            <h4 class="widget-title">Solutions</h4>
+                            <h4 class="widget-title">Products</h4>
                             <ul>
                                 <li>
-                                    <a href="/products.html?alpha-geo-L300">DGPS</a>
+                                    <a href="/products.html?gnss_receiver">GNSS</a>
                                 </li>
                                 <li>
-                                    <a href="/products.html?alpha-x">Total Station</a>
+                                    <a href="/products.html?total_station">Total Station</a>
                                 </li>
                                 <li>
-                                    <a href="/products.html?sokkia-B40A">Auto Level</a>
+                                    <a href="/products.html?controllers_and_tablets">Controllers & Tablets</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?gnss_sensor">GNSS Sensors</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?gnss_antennas">GNSS Antennas</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?optics">Optics</a>
+                                </li>
+                                <li>
+                                    <a href="/products.html?datalink">Datalink</a>
                                 </li>
                                 <li>
                                     <a href="/products.html?accessories">Accessories</a>
