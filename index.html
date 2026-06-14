@@ -1,25 +1,15 @@
 <html lang="en">
 
 <head>
-    <!-- ========== Meta Tags ========== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CSTech Survey & Co.">
-
-    <!-- ========== Page Title ========== -->
+    <meta name="description" content="CSTech Survey & Co. — India's trusted partner for survey and geospatial solutions.">
     <title>CSTech Survey & Co.</title>
-
-    <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
-
-    <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- <link href="assets/css/font-awesome.min.css" rel="stylesheet" /> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"/> -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link href="assets/css/themify-icons.css" rel="stylesheet" />
-    <!-- <link href="assets/css/flaticon-set.css" rel="stylesheet" /> -->
     <link href="assets/css/magnific-popup.css" rel="stylesheet" />
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
@@ -29,65 +19,399 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <link href="assets/css/icons.min.css" rel="stylesheet" />
-    <!-- ========== End Stylesheet ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ── Global overrides ── */
+body { font-family: 'Inter', sans-serif; }
+
+/* ── Section label pill ── */
+.sec-pill {
+    display: inline-block;
+    background: rgba(11,114,133,0.10);
+    color: #0b7285;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+}
+
+/* ── Stats strip ── */
+.stats-strip {
+    background: #0b7285;
+    padding: 42px 0;
+}
+.stats-strip .stat-item {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+}
+.stats-strip .stat-num {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+.stats-strip .stat-suffix {
+    font-size: 36px;
+    font-weight: 700;
+    vertical-align: super;
+}
+.stats-strip .stat-label {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+}
+.stats-strip .stat-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.25);
+    align-self: stretch;
+    margin: 0 auto;
+}
+
+/* ── About section ── */
+.home-about {
+    padding: 100px 0;
+    background: #fff;
+}
+.home-about .about-img-wrap {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+}
+.home-about .about-img-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+.home-about .about-img-badge {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    background: #0b7285;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.home-about .about-img-badge strong {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+}
+.home-about .about-text h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #111;
+    margin-bottom: 20px;
+}
+.home-about .about-text p {
+    color: #555;
+    font-size: 15.5px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.home-about .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 36px;
+}
+.home-about .check-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14.5px;
+    color: #333;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.home-about .check-list li:last-child { border-bottom: none; }
+.home-about .check-list li i {
+    color: #0b7285;
+    font-size: 14px;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(11,114,133,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-teal {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0b7285;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-teal:hover { background: #085e6e; color: #fff; transform: translateY(-2px); }
+.btn-teal-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #0b7285;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #0b7285;
+    transition: background 0.2s, color 0.2s;
+    margin-left: 12px;
+}
+.btn-teal-outline:hover { background: #0b7285; color: #fff; }
+
+/* ── Industries section ── */
+.industries-section {
+    padding: 100px 0;
+    background: #f5f8fc;
+}
+.industries-section h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+.industries-section .section-sub {
+    color: #666;
+    font-size: 15px;
+    max-width: 520px;
+    margin-bottom: 56px;
+}
+.industry-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+    height: 100%;
+    cursor: default;
+}
+.industry-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(11,114,133,0.14);
+}
+.industry-card .ic-icon {
+    width: 68px;
+    height: 68px;
+    background: rgba(11,114,133,0.10);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+.industry-card .ic-icon i {
+    font-size: 26px;
+    color: #0b7285;
+}
+.industry-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+.industry-card p {
+    font-size: 13.5px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Products grid ── */
+.products-grid-section {
+    padding: 100px 0;
+    background: #fff;
+}
+.products-grid-section h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+.products-grid-section .section-sub {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 56px;
+}
+.prod-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+@media (max-width: 992px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 576px) { .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+.prod-card {
+    background: #f7f9fc;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1.5px solid #eef1f5;
+}
+.prod-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(11,114,133,0.12);
+    border-color: rgba(11,114,133,0.2);
+    text-decoration: none;
+}
+.prod-card .pc-img {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    padding: 20px;
+    overflow: hidden;
+}
+.prod-card .pc-img img {
+    max-height: 140px;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+.prod-card:hover .pc-img img { transform: scale(1.06); }
+.prod-card .pc-body {
+    padding: 16px 18px 20px;
+    border-top: 1px solid #eef1f5;
+}
+.prod-card .pc-body h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+}
+.prod-card .pc-body span {
+    font-size: 12.5px;
+    color: #0b7285;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.prod-card .pc-body span i { font-size: 11px; }
+
+/* ── CTA banner ── */
+.home-cta {
+    background: linear-gradient(135deg, #0b7285 0%, #074f5e 100%);
+    padding: 90px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.home-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+}
+.home-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+}
+.home-cta h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+    position: relative; z-index: 1;
+}
+.home-cta p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
+}
+.btn-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: #0b7285;
+    padding: 14px 34px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; z-index: 1;
+}
+.btn-white:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.18); color: #0b7285; }
+
+/* ── Section heading helper ── */
+.sec-heading { margin-bottom: 8px; }
+
+/* ── Counter animation ── */
+@keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .home-about { padding: 64px 0; }
+    .home-about .about-text h2 { font-size: 26px; }
+    .home-about .about-img-wrap img { height: 300px; }
+    .stats-strip .stat-num { font-size: 34px; }
+    .home-cta h2 { font-size: 26px; }
+    .industries-section, .products-grid-section { padding: 64px 0; }
+}
+</style>
 </head>
 
 <body>
-    <!-- Start Preloader 
-    ============================================= -->
+    <!-- Preloader -->
     <div id="preloader">
         <div id="tanda-preloader" class="tanda-preloader">
             <div class="animation-preloader">
                 <div class="spinner"></div>
                 <div class="txt-loading">
-                    <span data-text-preloader="C" class="letters-loading">
-                        C
-                    </span>
-                    <span data-text-preloader="S" class="letters-loading">
-                        S
-                    </span>
-                    <span data-text-preloader="T" class="letters-loading">
-                        T
-                    </span>
-                    <span data-text-preloader="E" class="letters-loading">
-                        E
-                    </span>
-                    <span data-text-preloader="C" class="letters-loading">
-                        C
-                    </span>
-                    <span data-text-preloader="H" class="letters-loading">
-                        H
-                    </span>
+                    <span data-text-preloader="C" class="letters-loading">C</span>
+                    <span data-text-preloader="S" class="letters-loading">S</span>
+                    <span data-text-preloader="T" class="letters-loading">T</span>
+                    <span data-text-preloader="E" class="letters-loading">E</span>
+                    <span data-text-preloader="C" class="letters-loading">C</span>
+                    <span data-text-preloader="H" class="letters-loading">H</span>
                 </div>
             </div>
             <div class="loader">
                 <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
+                    <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                    <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                    <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+                    <div class="col-3 loader-section section-right"><div class="bg"></div></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Preloader -->
 
-    <!-- Header 
-    ============================================= -->
+    <!-- Header -->
     <header id="home" style="background: #fff !important;">
-        <!-- Start Navigation -->
         <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background" style="background: #fff !important;">
-
-            <div class="container d-flex justify-content-between align-items-center">            
-                <!-- Start Header Navigation -->
+            <div class="container d-flex justify-content-between align-items-center">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <img src="assets/icons/menu.png">
@@ -96,352 +420,281 @@
                         <img src="assets/img/logo.png" class="logo" alt="Logo">
                     </a>
                 </div>
-                
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <div class="collapse-header">
                         <img src="assets/img/logo.png" alt="Logo">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <!-- <img src="assets/icons/close.png" style="height: 16px; margin-top: 8px;"> -->
-                             X
-                        </button>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">X</button>
                     </div>
-                    
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="dropdown"><a href="/">Home</a></li>
+                        <li class="dropdown"><a href="/about.html">About</a></li>
                         <li class="dropdown">
-                            <a href="/" >Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="/about.html" >About</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="/products.html" class="dropdown-toggle" data-toggle="dropdown" >Products</a>
+                            <a href="/products.html" class="dropdown-toggle" data-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu">
                                 <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
                                 <li><a href="/products.html?total_station">Total Station</a></li>
-                                <li><a href="/products.html?controllers_and_tablets">Controllers & Tablets</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
                                 <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
                                 <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
-                                <!-- <li><a href="/products.html?scanners">3D Scanners</a></li> -->
                                 <li><a href="/products.html?optics">Optics</a></li>
                                 <li><a href="/products.html?datalink">Datalink</a></li>
-                                <!-- <li><a href="/products.html?software">Software</a></li> -->
                                 <li><a href="/products.html?accessories">Accessories</a></li>
                             </ul>
                         </li>
-                       <li class="dropdown">
-                            <a href="/industries.html" class="dropdown-toggle" data-toggle="dropdown" >Industries</a>
+                        <li class="dropdown">
+                            <a href="/industries.html" class="dropdown-toggle" data-toggle="dropdown">Industries</a>
                             <ul class="dropdown-menu">
-                                <li><a href="/industries.html#surveying-engineering">Surveying & Engineering</a></li>
+                                <li><a href="/industries.html#surveying-engineering">Surveying &amp; Engineering</a></li>
                                 <li><a href="/industries.html#geographic-information-system">Geographic Information System</a></li>
                                 <li><a href="/industries.html#3d-scanning-mapping">3D Scanning Mapping</a></li>
                                 <li><a href="/industries.html#monitoring">Monitoring</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="/contact.html" >Contact</a>
-                        </li>
+                        <li class="dropdown"><a href="/contact.html">Contact</a></li>
                     </ul>
                 </div>
-            </div>   
-            <!-- Overlay screen for menu -->
+            </div>
             <div class="overlay-screen"></div>
-            <!-- End Overlay screen for menu -->
         </nav>
-        <!-- End Navigation -->
     </header>
-    <!-- End Header -->
 
-   <!-- Start Banner 
-    ============================================= -->
-    
-								<div style="background-size: cover; background-repeat: no-repeat;">
-                                    <div class="banner-video-box" >
-                                    <video style="width: 100%;" autoplay src="assets/img/banner-1.mp4" poster="" class="video-obj" muted="" x5-video-player-type="h5-page" playsinline=""></video>
-                                </div>
-                                </div>
-    <!-- End Banner -->
-
-    <!-- Star Featured Services Area
-    ============================================= -->
-    <div class="featured-services-area pt-md-120 text-center default-padding-bottom bottom-less" hidden>
-        <!-- Fixed Shape  -->
-        <div class="fixed-shape-left-top">
-            <img src="assets/img/7.png" alt="Shape">
-        </div>
-        <!-- End Fixed Shape  -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4>Featured Services</h4>
-                        <h2 class="title">Engaging Creative <br> minds via technology</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <!-- Single Item -->
-                <div class="single-item col-lg-3 col-md-6">
-                    <div class="item">
-                        <i class="flaticon-cogwheel"></i>
-                        <h5>IT Consultancy</h5>
-                        <p>
-                             Astonished set expression solicitude way admiration
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="single-item col-lg-3 col-md-6">
-                    <div class="item">
-                        <i class="flaticon-cloud-storage"></i>
-                        <h5>Cloud Computing</h5>
-                        <p>
-                             Astonished set expression solicitude way admiration
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="col-lg-3 col-md-6 single-item">
-                    <div class="item">
-                        <i class="flaticon-globe-grid"></i>
-                        <h5>Cyber Security</h5>
-                        <p>
-                             Astonished set expression solicitude way admiration
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="col-lg-3 col-md-6 single-item">
-                    <div class="item">
-                        <i class="flaticon-backup"></i>
-                        <h5>Backup Recovery</h5>
-                        <p>
-                             Astonished set expression solicitude way admiration
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-            </div>
-        </div>
-    </div>
-    <!-- End Feature Services Area -->
-
-    <div class="feature-area overflow-hidden default-padding">
-        <div class="container">
-            <div class="heading-left">
-                <div class="row align-center">
-                    <div class="col-lg-6">
-                        <h5>About Us</h5>
-                        <h2 class="title">
-                            Offer The Latest Solutions to our customers!
-                        </h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <p>
-                            <strong style="color: var(--color-primary);">CSTech Survey & Co.</strong> established to offer a wide range of consulting services with the necessary tools & expertise to help Hydraullic, Hydrologic, Irrigation, Aritificial Intelligence, GIS & RS, Transportation, Structutal Acnalysis & Design, Climate Chnage, od the world. Advance Municipal & Rural Water & Wastewater Infrastructure of the world
-                        </p>
-                        <p style="padding-top: 50px;">We partner with our clients from start to finish, focusing on their needs while producing new ideas, developing effective strategic and designing high quality and scalable solutions.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Banner (unchanged) -->
+    <div style="background-size: cover; background-repeat: no-repeat;">
+        <div class="banner-video-box">
+            <video style="width: 100%;" autoplay src="assets/img/banner-1.mp4" poster="" class="video-obj" muted="" x5-video-player-type="h5-page" playsinline=""></video>
         </div>
     </div>
 
-    <!-- Star About Area
-    ============================================= -->
-    <div class="about-area default-padding-top" style="background-color: #f3f7fd; padding-bottom: 50px;">
+    <!-- ── Stats Strip ── -->
+    <!-- <section class="stats-strip">
         <div class="container">
-            <div class="row align-center">
+            <div class="row text-center g-0">
+                <div class="col-6 col-md-3 stat-item">
+                    <div class="stat-num counter" data-count="15">0</div><span class="stat-suffix">+</span>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <div class="stat-num counter" data-count="200">0</div><span class="stat-suffix">+</span>
+                    <div class="stat-label">Products Supplied</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item" style="margin-top: 24px;" id="stat3">
+                    <div class="stat-num counter" data-count="500">0</div><span class="stat-suffix">+</span>
+                    <div class="stat-label">Clients Served</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item" style="margin-top: 24px;" id="stat4">
+                    <div class="stat-num counter" data-count="8">0</div>
+                    <div class="stat-label">Product Categories</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ── About Section ── -->
+    <section class="home-about">
+        <div class="container">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <div class="thumb">
-                        <img src="assets/img/3d-scanning-mapping.jpg" alt="Thumb">
-                        <img src="assets/img/whychoose2.jpg" alt="Thumb">
-                        <!-- <img src="assets/img/abt1.png" alt="Thumb"> -->
-                        <!-- <div class="overlay">
-                            <div class="content">
-                                <h4><strong>20</strong> years of experience</h4>
-                            </div>
+                    <div class="about-img-wrap">
+                        <img src="assets/img/3d-scanning-mapping.jpg" alt="Survey equipment in the field">
+                        <!-- <div class="about-img-badge">
+                            <strong>15+</strong>
+                            Years of trusted<br>expertise in India
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-6 info">
-                    <div class="why-us">
-                        <h5 style="color: var(--color-primary);">We offer solutions for various indurtries</h5>
-                    </div>
-                    <h2 class="title">Why choose us</h2>
-                    <!-- <p>
-                        Dissuade ecstatic and properly saw entirely sir why laughter endeavor. In on my jointure horrible margaret suitable he followed speedily. Indeed vanity excuse or mr lovers of on. By offer scale an stuff. Blush be sorry no sight sang lose. 
-                    </p> -->
-                    <ul>
-                        <li>
-                            <div class="icon">
-                                <i class="flaticon-certification"></i>
-                            </div>
-                            <div class="info" style="text-align: left;">
-                                
-                                <h4><strong><span class="fa fa-check"></span></strong> Project Mapping</h4>
-                                <h4><strong><span class="fa fa-check"></span></strong> Irrigation Management</h4>
-                                <h4><strong><span class="fa fa-check"></span></strong> Precision Aggriculture</h4>
-                                <h4><strong><span class="fa fa-check"></span></strong> Numerical Simulation</h4>
-                                <h4><strong><span class="fa fa-check"></span></strong> Hydraullic & Hydralogic Modeling Applications</h4>
-                            </div>
-                        </li>
+                <div class="col-lg-6 about-text ps-lg-5">
+                    <span class="sec-pill">Who We Are</span>
+                    <h2 class="sec-heading">India's Trusted Partner for Survey &amp; Geospatial Solutions</h2>
+                    <p>
+                        <strong style="color:#0b7285;">CSTech Survey &amp; Co.</strong> was established to deliver a comprehensive range of consulting services backed by the latest survey instruments and deep domain expertise — empowering professionals across hydraulics, GIS &amp; remote sensing, precision agriculture, transportation planning, and structural analysis.
+                    </p>
+                    <p>We partner with our clients from start to finish, focusing on their specific needs while developing effective strategies and supplying high-quality, field-proven equipment.</p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> Project Mapping &amp; Geospatial Analysis</li>
+                        <li><i class="fas fa-check"></i> Irrigation &amp; Water Resource Management</li>
+                        <li><i class="fas fa-check"></i> Precision Agriculture Solutions</li>
+                        <li><i class="fas fa-check"></i> Hydraulic &amp; Hydrologic Modeling</li>
+                        <li><i class="fas fa-check"></i> Numerical Simulation &amp; 3D Scanning</li>
                     </ul>
+                    <a href="/about.html" class="btn-teal">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="/contact.html" class="btn-teal-outline">Contact Us</a>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End About Area -->
+    </section>
 
-    <div class="thumb-services-area carousel-shadow default-padding">
+    <!-- ── Industries Section ── -->
+    <section class="industries-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4 style="color: var(--color-danger);">We have been positioning on Ready-To-Survey Solutions</h4>
-                        <h2 class="title">Our Products</h2>
+            <div class="text-center mb-5">
+                <span class="sec-pill">Industries</span>
+                <h2 class="sec-heading">Sectors We Serve</h2>
+                <p class="section-sub mx-auto">From precision land surveys to large-scale GIS projects, we equip professionals across every geospatial discipline.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="industry-card">
+                        <div class="ic-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h4>Surveying &amp; Engineering</h4>
+                        <p>Precision instruments for land surveys, construction layout, and civil engineering projects of any scale.</p>
+                        <a href="/industries.html#surveying-engineering" style="color:#0b7285; font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:5px; margin-top:14px;">Explore <i class="fas fa-arrow-right" style="font-size:11px;"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="industry-card">
+                        <div class="ic-icon"><i class="fas fa-globe"></i></div>
+                        <h4>Geographic Information System</h4>
+                        <p>GNSS receivers, sensors and antennas for accurate geospatial data capture and GIS mapping workflows.</p>
+                        <a href="/industries.html#geographic-information-system" style="color:#0b7285; font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:5px; margin-top:14px;">Explore <i class="fas fa-arrow-right" style="font-size:11px;"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="industry-card">
+                        <div class="ic-icon"><i class="fas fa-cube"></i></div>
+                        <h4>3D Scanning &amp; Mapping</h4>
+                        <p>High-resolution 3D scanning and photogrammetry tools for detailed volumetric and as-built surveys.</p>
+                        <a href="/industries.html#3d-scanning-mapping" style="color:#0b7285; font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:5px; margin-top:14px;">Explore <i class="fas fa-arrow-right" style="font-size:11px;"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="industry-card">
+                        <div class="ic-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h4>Monitoring</h4>
+                        <p>Continuous structural and deformation monitoring solutions for dams, bridges, tunnels and slopes.</p>
+                        <a href="/industries.html#monitoring" style="color:#0b7285; font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:5px; margin-top:14px;">Explore <i class="fas fa-arrow-right" style="font-size:11px;"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- ── Products Grid ── -->
+    <section class="products-grid-section">
         <div class="container">
-            <div class="services-items services-carousel owl-carousel owl-theme text-center owl-loaded owl-drag">
-            <div class="owl-stage-outer">
-                <div class="owl-stage" style="transform: translate3d(-884px, 0px, 0px); transition: 0.25s; width: 2210px;"><div class="owl-item" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/gnss/ap20/ap20-gnss-receiver-1_thumbW360.png" alt="Icon">
-                    </div>
-                    <div class="info">
-                        <h4>GNSS Receivers</h4>
-                        <a href="products.html?gnss_receiver">View More <i class="fas fa-angle-right"></i></a>
-                    </div>
-                </div>
+            <div class="text-center mb-2">
+                <span class="sec-pill">Products</span>
+                <h2 class="sec-heading">Ready-to-Survey Equipment</h2>
+                <p class="section-sub mx-auto mb-5">Explore our full range of professional survey and geospatial instruments from the world's leading brands.</p>
             </div>
-            <div class="owl-item" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/total_station/am02/totalStationmain.jpg" alt="Icon">
+            <div class="prod-grid">
+
+                <a class="prod-card" href="products.html?gnss_receiver">
+                    <div class="pc-img">
+                        <img src="assets/img/products/gnss/ap20/ap20-gnss-receiver-1_thumbW360.png" alt="GNSS Receivers">
                     </div>
-                    <div class="info">
-                        <h4>Total Stations</h4>
-                        <a href="products.html?total_station">View More <i class="fas fa-angle-right"></i></a>
+                    <div class="pc-body">
+                        <h5>GNSS Receivers</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
                     </div>
-                </div>
-            </div>
-            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/tablets/ts8i_5g/ts8i-5g-rugged-professional-android-table_thumbW360.png" alt="Icon">
+                </a>
+
+                <a class="prod-card" href="products.html?total_station">
+                    <div class="pc-img">
+                        <img src="assets/img/products/total_station/am02/totalStationmain.jpg" alt="Total Stations">
                     </div>
-                    <div class="info">
-                        <h4>Controller & Tablets</h4>
-                        <a href="products.html?controllers_and_tablets">View More <i class="fas fa-angle-right"></i></a>
+                    <div class="pc-body">
+                        <h5>Total Stations</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
                     </div>
-                </div>
-            </div>
-            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/sensors/m66UGH/26-1_thumbW360.jpg" alt="Icon">
+                </a>
+
+                <a class="prod-card" href="products.html?controllers_and_tablets">
+                    <div class="pc-img">
+                        <img src="assets/img/products/tablets/ts8i_5g/ts8i-5g-rugged-professional-android-table_thumbW360.png" alt="Controllers & Tablets">
                     </div>
-                    <div class="info">
-                        <h4>GNSS Sensors</h4>
-                        <a href="products.html?gnss_sensor">View More <i class="fas fa-angle-right"></i></a>
+                    <div class="pc-body">
+                        <h5>Controllers &amp; Tablets</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
                     </div>
-                </div>
-            </div>
-            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/antennas/tca920/2-3_thumbW360.jpg" alt="Icon">
+                </a>
+
+                <a class="prod-card" href="products.html?gnss_sensor">
+                    <div class="pc-img">
+                        <img src="assets/img/products/sensors/m66UGH/26-1_thumbW360.jpg" alt="GNSS Sensors">
                     </div>
-                    <div class="info">
-                        <h4>GNSS Antennas</h4>
-                        <a href="products.html?gnss_antennas">View More <i class="fas fa-angle-right"></i></a>
+                    <div class="pc-body">
+                        <h5>GNSS Sensors</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
                     </div>
-                </div>
-            </div>
-            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/optics/sokkia_b40/3_thumbW360.jpg" alt="Icon">
+                </a>
+
+                <a class="prod-card" href="products.html?gnss_antennas">
+                    <div class="pc-img">
+                        <img src="assets/img/products/antennas/tca920/2-3_thumbW360.jpg" alt="GNSS Antennas">
                     </div>
-                    <div class="info">
-                        <h4>Optics</h4>
-                        <a href="products.html?optics">View More <i class="fas fa-angle-right"></i></a>
+                    <div class="pc-body">
+                        <h5>GNSS Antennas</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
                     </div>
-                </div>
-            </div>
-            
-            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/datalink/adl35/adl35-high-power-external-radio-for-surveying_thumbW360.png" alt="Icon">
+                </a>
+
+                <a class="prod-card" href="products.html?optics">
+                    <div class="pc-img">
+                        <img src="assets/img/products/optics/sokkia_b40/3_thumbW360.jpg" alt="Optics">
                     </div>
-                    <div class="info">
-                        <h4>Data Link</h4>
-                        <a href="products.html?datalink">View More <i class="fas fa-angle-right"></i></a>
+                    <div class="pc-body">
+                        <h5>Optics</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
                     </div>
-                </div>
-            </div>
-            
-            
-            <div class="owl-item active" style="width: 412px; margin-right: 30px;"><div class="item">
-                    <div class="icon">
-                        <img src="assets/img/products/accessories/topcon_prism/18-1_thumbW360.jpg" alt="Icon">
+                </a>
+
+                <a class="prod-card" href="products.html?datalink">
+                    <div class="pc-img">
+                        <img src="assets/img/products/datalink/adl35/adl35-high-power-external-radio-for-surveying_thumbW360.png" alt="Datalink">
                     </div>
-                    <div class="info">
-                        <h4>Accessories</h4>
-                        <a href="products.html?accessories">View More <i class="fas fa-angle-right"></i></a>
+                    <div class="pc-body">
+                        <h5>Datalink</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
                     </div>
-                </div>
+                </a>
+
+                <a class="prod-card" href="products.html?accessories">
+                    <div class="pc-img">
+                        <img src="assets/img/products/accessories/topcon_prism/18-1_thumbW360.jpg" alt="Accessories">
+                    </div>
+                    <div class="pc-body">
+                        <h5>Accessories</h5>
+                        <span>Explore range <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- ── CTA Banner ── -->
+    <section class="home-cta">
+        <div class="container">
+            <span class="sec-pill" style="background:rgba(255,255,255,0.15); color:#fff;">Get Started</span>
+            <h2>Ready to elevate your survey operations?</h2>
+            <p>Talk to our experts and find the right equipment for your next project.</p>
+            <a href="/contact.html" class="btn-white">Contact Us <i class="fas fa-arrow-right"></i></a>
         </div>
-    </div>
+    </section>
 
-
-
-    <!-- Start Footer 
-    ============================================= -->
-    <footer class="bg-dark text-light" style="margin-top: 100px; margin-bottom: -120px;">
-        <!-- Fixed Shape -->
+    <!-- Footer -->
+    <footer class="bg-dark text-light" style="margin-top: 0; margin-bottom: -120px;">
         <div class="fixed-shape">
             <img src="assets/img/footermap.svg" alt="Shape">
         </div>
-        <!-- Fixed Shape -->
         <div class="container">
             <div class="f-items default-padding">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                             <h3>CSTECH SURVEY & CO.</h3>
-                            <p>
-                                Established to offer wide range of consulting services with necessary tools & expertise to scale your business
-                            </p>
+                            <h3>CSTECH SURVEY &amp; CO.</h3>
+                            <p>Established to offer wide range of consulting services with necessary tools &amp; expertise to scale your business</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
                             <h4 class="widget-title">Company</h4>
                             <ul>
-                                <li>
-                                    <a href="/">Home</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="products.html">Products</a>
-                                </li>
-                                <li>
-                                    <a href="industries.html">Industries</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact Us</a>
-                                </li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="industries.html">Industries</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -449,47 +702,24 @@
                         <div class="f-item link">
                             <h4 class="widget-title">Products</h4>
                             <ul>
-                                <li>
-                                    <a href="/products.html?gnss_receiver">GNSS</a>
-                                </li>
-                                <li>
-                                    <a href="/products.html?total_station">Total Station</a>
-                                </li>
-                                <li>
-                                    <a href="/products.html?controllers_and_tablets">Controllers & Tablets</a>
-                                </li>
-                                <li>
-                                    <a href="/products.html?gnss_sensor">GNSS Sensors</a>
-                                </li>
-                                <li>
-                                    <a href="/products.html?gnss_antennas">GNSS Antennas</a>
-                                </li>
-                                <li>
-                                    <a href="/products.html?optics">Optics</a>
-                                </li>
-                                <li>
-                                    <a href="/products.html?datalink">Datalink</a>
-                                </li>
-                                <li>
-                                    <a href="/products.html?accessories">Accessories</a>
-                                </li>
+                                <li><a href="/products.html?gnss_receiver">GNSS</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <li><a href="/products.html?accessories">Accessories</a></li>
                             </ul>
                         </div>
                     </div>
-
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item">
                             <h4 class="widget-title">Contact Info</h4>
                             <div class="address">
                                 <ul>
-                                    <li>
-                                        <strong>Address:</strong>
-                                        Unit no - 821, 8th Floor Jaina Tower 1, Janakpuri, District Center, New Delhi - 110058
-                                    </li>
-                                    <li>
-                                        <strong>Email:</strong>
-                                        <a href="mailto:sales@cstechsurvey.com">sales@cstechsurvey.com</a>
-                                    </li>
+                                    <li><strong>Address:</strong> Unit no - 821, 8th Floor Jaina Tower 1, Janakpuri, District Center, New Delhi - 110058</li>
+                                    <li><strong>Email:</strong> <a href="mailto:sales@cstechsurvey.com">sales@cstechsurvey.com</a></li>
                                 </ul>
                             </div>
                             <div class="download">
@@ -501,26 +731,20 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-        <!-- Start Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <p>Copyright © 2025. Designed by <a href="#">CSTech Survey & Co.</a></p>
+                        <p>Copyright &copy; 2025. Designed by <a href="#">CSTech Survey &amp; Co.</a></p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Footer Bottom -->
     </footer>
-    <!-- End Footer -->
 
-    <!-- jQuery Frameworks
-    ============================================= -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
@@ -537,5 +761,38 @@
     <script src="assets/js/validnavs.js"></script>
     <script src="assets/js/main.js"></script>
 
+<script>
+/* Animated counters using IntersectionObserver */
+(function() {
+    var counters = document.querySelectorAll('.counter');
+    if (!counters.length) return;
+
+    function animateCount(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var duration = 1800;
+        var start = performance.now();
+        function step(now) {
+            var elapsed = now - start;
+            var progress = Math.min(elapsed / duration, 1);
+            var ease = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(ease * target);
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = target;
+        }
+        requestAnimationFrame(step);
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                animateCount(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
+
+    counters.forEach(function(c) { observer.observe(c); });
+})();
+</script>
 </body>
 </html>
