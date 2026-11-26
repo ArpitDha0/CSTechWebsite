@@ -127,6 +127,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
                                 <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?drone">Drone</a></li>
                                 <li><a href="/products.html?controllers_and_tablets">Controllers & Tablets</a></li>
                                 <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
                                 <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
@@ -208,10 +209,9 @@
 }
 
 /* IMAGE */
-.product-card img {
-  max-width: 100%;
-  height: 120px;
-  object-fit: contain;
+.drone-product img {
+    width: 180px;
+    height: 180px;
   transition: transform 0.8s ease-in-out;
 }
 
@@ -264,6 +264,7 @@
       
       <div class="category active-category" data-category="gnss_receiver">GNSS Receiver</div>
       <div class="category" data-category="total_station">Total Station</div>
+      <div class="category" data-category="drone">Drone</div>
       <div class="category" data-category="controllers_and_tablets">Controllers & Tablets</div>
       <div class="category" data-category="gnss_sensor">GNSS Sensors</div>
       <div class="category" data-category="gnss_antennas">GNSS Antennas</div>
@@ -298,6 +299,16 @@
     total_station: [
       { name: "AM02 Total Station", img: "/assets/img/products/total_station/am02/totalStationmain.jpg", link: "/products/am02.html" },
     ],
+
+drone: [
+    {
+        name: "CS1 Pro LiDAR Drone",
+        img: "/assets/img/products/drone/CSTECH CS1.png",
+        link: "/products/cs1-pro.html"
+    }
+],
+  
+
     controllers_and_tablets: [
       { name: "TS8i 5G Android Tablet", img: "/assets/img/products/tablets/ts8i_5g/ts8i-5g-rugged-professional-android-table_thumbW360.png", link: "/products/ts8i-5g.html" },
       { name: "TS8i Pro Tablet with GNSS", img: "/assets/img/products/tablets/ts8i_pro/ts8i-pro-rugged-tablet-with-gnss-rtk-positioning_thumbW360.png", link: "/products/ts8i-pro.html" },
@@ -503,6 +514,11 @@ function scrollToCategory(category) {
                                 <li>
                                     <a href="/products.html?total_station">Total Station</a>
                                 </li>
+
+                                <li>
+    <a href="/products.html?drone">Drone</a>
+</li>
+
                                 <li>
                                     <a href="/products.html?controllers_and_tablets">Controllers & Tablets</a>
                                 </li>

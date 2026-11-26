@@ -1,0 +1,1411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terms & Conditions | CSTECH SURVEY & CO.</title>
+    <meta name="description" content="Terms of Service of CSTECH Survey & Co. Read our policies regarding products, pricing, orders, delivery, warranty, returns and website usage.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" href="/assets/img/favicon.png">
+
+    <!-- Existing Website Theme CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================================
+           CSTech Terms & Conditions Page
+        ========================================= */
+
+        :root {
+            --tc-navy: #071044;
+            --tc-navy-light: #111e59;
+            --tc-red: #d71935;
+            --tc-text: #444b5b;
+            --tc-muted: #72798b;
+            --tc-light: #f5f7fb;
+            --tc-border: #e8ebf2;
+            --tc-white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--tc-text);
+            background: var(--tc-white);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .tc-header {
+            width: 100%;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            box-shadow: 0 2px 12px rgba(7, 16, 68, 0.07);
+        }
+
+        .tc-header-inner {
+            max-width: 1320px;
+            min-height: 88px;
+            padding: 12px 24px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .tc-brand {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .tc-brand img {
+            max-width: 210px;
+            max-height: 65px;
+            object-fit: contain;
+        }
+
+        .tc-nav {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+
+        .tc-nav a {
+            color: var(--tc-navy);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .tc-nav a:hover,
+        .tc-nav a.active {
+            color: var(--tc-red);
+        }
+
+        .tc-nav .tc-contact-btn {
+            padding: 12px 21px;
+            background: var(--tc-red);
+            color: #fff;
+            border-radius: 4px;
+            transition: 0.25s;
+        }
+
+        .tc-nav .tc-contact-btn:hover {
+            background: var(--tc-navy);
+            color: #fff;
+        }
+
+        .tc-menu-toggle {
+            display: none;
+            width: 43px;
+            height: 43px;
+            border: 1px solid var(--tc-border);
+            background: white;
+            border-radius: 5px;
+            font-size: 20px;
+            color: var(--tc-navy);
+            cursor: pointer;
+        }
+
+        /* =========================================
+           PAGE BANNER
+        ========================================= */
+
+        .tc-banner {
+            background:
+                linear-gradient(110deg,
+                    rgba(7, 16, 68, 0.98),
+                    rgba(7, 16, 68, 0.88)),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85");
+
+            background-position: center;
+            background-size: cover;
+            padding: 75px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .tc-banner-inner {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .tc-banner-label {
+            color: #ff667d;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .tc-banner h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            color: white;
+            font-weight: 800;
+            margin: 0 0 15px;
+        }
+
+        .tc-banner p {
+            color: #d9def5;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .tc-breadcrumb {
+            margin-top: 22px;
+            font-size: 13px;
+        }
+
+        .tc-breadcrumb a {
+            color: #ffffff;
+            opacity: 0.8;
+        }
+
+        .tc-breadcrumb span {
+            color: #ff637b;
+            margin: 0 10px;
+        }
+
+        /* =========================================
+           MAIN CONTENT
+        ========================================= */
+
+        .tc-main {
+            background: #f6f7fb;
+            padding: 75px 20px;
+        }
+
+        .tc-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tc-document {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #edf0f5;
+            padding: 55px 60px;
+            box-shadow: 0 12px 45px rgba(7, 16, 68, 0.05);
+        }
+
+        .tc-document-header {
+            text-align: center;
+            padding-bottom: 35px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--tc-border);
+        }
+
+        .tc-document-header .tc-tag {
+            display: inline-block;
+            padding: 7px 14px;
+            background: #fff0f2;
+            color: var(--tc-red);
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 17px;
+        }
+
+        .tc-document-header h2 {
+            font-size: 25px;
+            color: var(--tc-navy);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .tc-document-header p {
+            color: var(--tc-muted);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .tc-document-header .tc-date {
+            margin-top: 14px;
+            display: inline-block;
+            color: #50596b;
+            background: #f4f6fa;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .tc-section {
+            margin-bottom: 35px;
+            scroll-margin-top: 110px;
+        }
+
+        .tc-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .tc-section h3 {
+            color: var(--tc-navy);
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 0 0 17px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .tc-section h3::before {
+            content: "";
+            width: 4px;
+            height: 100%;
+            background: var(--tc-red);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4px;
+        }
+
+        .tc-section p {
+            color: var(--tc-text);
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 13px;
+        }
+
+        .tc-section ul {
+            margin: 12px 0 18px;
+            padding-left: 23px;
+        }
+
+        .tc-section li {
+            color: var(--tc-text);
+            font-size: 15px;
+            line-height: 1.85;
+            padding-left: 4px;
+            margin-bottom: 6px;
+        }
+
+        .tc-section li::marker {
+            color: var(--tc-red);
+        }
+
+        /* Contact Card */
+
+        .tc-contact-card {
+            background: #f6f7fb;
+            border: 1px solid #e8ebf3;
+            border-radius: 9px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .tc-contact-card h4 {
+            color: var(--tc-navy);
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .tc-contact-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .tc-contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .tc-contact-icon {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            border-radius: 7px;
+            background: #fff0f2;
+            color: var(--tc-red);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tc-contact-item p {
+            margin: 3px 0 0;
+            line-height: 1.7;
+        }
+
+        .tc-contact-item a {
+            color: var(--tc-navy);
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .tc-contact-item a:hover {
+            color: var(--tc-red);
+        }
+
+        /* Thank You */
+
+        .tc-thank-you {
+            text-align: center;
+            margin-top: 45px;
+            padding: 30px 20px;
+            border-top: 1px solid var(--tc-border);
+        }
+
+        .tc-thank-you h4 {
+            color: var(--tc-navy);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .tc-thank-you p {
+            color: var(--tc-muted);
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .tc-footer {
+            background: #071044;
+            color: #ffffff;
+            padding: 65px 20px 0;
+        }
+
+        .tc-footer-container {
+            max-width: 1320px;
+            margin: auto;
+        }
+
+        .tc-footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            padding-bottom: 45px;
+        }
+
+        .tc-footer-logo {
+            max-width: 210px;
+            max-height: 75px;
+            object-fit: contain;
+            object-position: left;
+            margin-bottom: 20px;
+            background: #ffffff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .tc-footer h3 {
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .tc-footer-about p {
+            color: #c4cbe1;
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .tc-footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tc-footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .tc-footer-links a {
+            color: #c4cbe1;
+            font-size: 14px;
+            transition: 0.25s;
+        }
+
+        .tc-footer-links a:hover {
+            color: #ff536d;
+            padding-left: 4px;
+        }
+
+        .tc-footer-contact p {
+            color: #c4cbe1;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            word-break: break-word;
+        }
+
+        .tc-footer-contact a {
+            color: #c4cbe1;
+        }
+
+        .tc-footer-contact a:hover {
+            color: #ffffff;
+        }
+
+        .tc-footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .tc-footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            background: rgba(255,255,255,0.10);
+            transition: 0.25s;
+        }
+
+        .tc-footer-social a:hover {
+            background: var(--tc-red);
+            transform: translateY(-3px);
+        }
+
+        .tc-footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding: 22px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tc-footer-bottom p {
+            color: #aeb8d5;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .tc-legal-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tc-legal-links a {
+            color: #c4cbe1;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .tc-legal-links a:hover,
+        .tc-legal-links a.active {
+            color: #ff536d;
+        }
+
+        /* Back To Top */
+
+        .tc-back-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            background: var(--tc-red);
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(215, 25, 53, 0.25);
+        }
+
+        .tc-back-top:hover {
+            background: var(--tc-navy);
+        }
+
+        .tc-back-top.show {
+            display: flex;
+        }
+
+        /* =========================================
+           RESPONSIVE TABLET
+        ========================================= */
+
+        @media (max-width: 1000px){
+            .tc-header-inner {
+                min-height: 75px;
+            }
+
+            .tc-brand img {
+                max-width: 175px;
+            }
+
+            .tc-nav {
+                gap: 16px;
+            }
+
+            .tc-nav a {
+                font-size: 13px;
+            }
+
+            .tc-footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+
+            .tc-document {
+                padding: 40px;
+            }
+        }
+
+        /* =========================================
+           RESPONSIVE MOBILE NAV
+        ========================================= */
+
+        @media (max-width: 767px) {
+            .tc-header-inner {
+                min-height: 72px;
+                padding: 10px 16px;
+            }
+
+            .tc-brand img {
+                max-width: 165px;
+                max-height: 55px;
+            }
+
+            .tc-menu-toggle {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .tc-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                padding: 12px 20px 22px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                box-shadow: 0 12px 20px rgba(7,16,68,0.12);
+            }
+
+            .tc-nav.open {
+                display: flex;
+            }
+
+            .tc-nav a {
+                display: block;
+                padding: 13px 5px;
+                border-bottom: 1px solid #f0f1f5;
+                font-size: 14px;
+            }
+
+            .tc-nav .tc-contact-btn {
+                text-align: center;
+                margin-top: 12px;
+                border-bottom: none;
+            }
+
+            .tc-banner {
+                padding: 55px 15px;
+            }
+
+            .tc-banner p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .tc-main {
+                padding: 35px 12px;
+            }
+
+            .tc-document {
+                padding: 28px 20px;
+                border-radius: 8px;
+            }
+
+            .tc-document-header {
+                margin-bottom: 30px;
+                padding-bottom: 25px;
+            }
+
+            .tc-document-header h2 {
+                font-size: 22px;
+            }
+
+            .tc-section {
+                margin-bottom: 28px;
+            }
+
+            .tc-section h3 {
+                font-size: 19px;
+            }
+
+            .tc-section p,
+            .tc-section li {
+                font-size: 14px;
+                line-height: 1.85;
+            }
+
+            .tc-contact-card {
+                padding: 18px;
+            }
+
+            .tc-footer {
+                padding: 45px 18px 0;
+            }
+
+            .tc-footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .tc-footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tc-legal-links {
+                gap: 13px;
+            }
+
+            .tc-back-top {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .tc-banner h1 {
+                font-size: 29px;
+            }
+
+            .tc-document {
+                padding: 23px 15px;
+            }
+
+            .tc-brand img {
+                max-width: 145px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================
+     HEADER / NAVIGATION
+========================================= -->
+
+<header class="tc-header">
+    <div class="tc-header-inner">
+
+        <a href="/index.html" class="tc-brand">
+            <img
+                src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg"
+                alt="CSTECH Survey & Co Logo">
+        </a>
+
+        <button class="tc-menu-toggle"
+                id="tcMenuToggle"
+                aria-label="Toggle Navigation"
+                aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="tc-nav" id="tcNavigation">
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About Us</a>
+            <a href="/products.html">Products</a>
+            <a href="/industries.html">Industries</a>
+            <a href="/resources.html">Resources</a>
+            <a href="/careers.html">Careers</a>
+            <a href="/contact.html" class="tc-contact-btn">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- =========================================
+     PAGE BANNER
+========================================= -->
+
+<section class="tc-banner">
+    <div class="tc-banner-inner">
+
+        <div class="tc-banner-label">Legal Information</div>
+
+        <h1>Terms &amp; Conditions</h1>
+
+        <p>
+            Please read our terms carefully before using our website
+            or purchasing our products and services.
+        </p>
+
+        <div class="tc-breadcrumb">
+            <a href="/index.html">Home</a>
+            <span>/</span>
+            Terms &amp; Conditions
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================
+     TERMS OF SERVICE
+========================================= -->
+
+<main class="tc-main">
+    <div class="tc-container">
+
+        <article class="tc-document">
+
+            <div class="tc-document-header">
+                <span class="tc-tag">WEBSITE LEGAL POLICY</span>
+
+                <h2>TERMS OF SERVICE</h2>
+
+                <p>CSTECH SURVEY &amp; CO.</p>
+
+                <p class="tc-date">
+                    Effective Date: 26 November 2026
+                </p>
+            </div>
+
+            <!-- SECTION 1 -->
+            <section class="tc-section">
+                <h3>1. Introduction</h3>
+
+                <p>
+                    Welcome to CSTECH Survey &amp; Co. These Terms of Service
+                    govern your access to and use of our website, products,
+                    services and related online platforms.
+                </p>
+
+                <p>
+                    By accessing our website, contacting us, requesting a
+                    quotation or purchasing our products, you agree to comply
+                    with these Terms of Service.
+                </p>
+
+                <p>
+                    If you do not agree with these terms, please discontinue
+                    using our website and services.
+                </p>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section class="tc-section">
+                <h3>2. About Our Company</h3>
+
+                <p>
+                    CSTECH Survey &amp; Co is engaged in the marketing,
+                    sales and supply of surveying instruments, geospatial
+                    equipment and related accessories.
+                </p>
+
+                <p>Our product range may include:</p>
+
+                <ul>
+                    <li>GNSS Receivers and DGPS Equipment</li>
+                    <li>Total Stations</li>
+                    <li>Auto Levels</li>
+                    <li>Surveying Accessories</li>
+                    <li>Other land surveying and measurement equipment</li>
+                </ul>
+
+                <p>
+                    We are authorized sellers of APEKS-branded surveying
+                    instruments.
+                </p>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section class="tc-section">
+                <h3>3. Product Information</h3>
+
+                <p>
+                    We make reasonable efforts to ensure that product
+                    descriptions, images, specifications and technical
+                    information displayed on our website are accurate.
+                </p>
+
+                <p>However:</p>
+
+                <ul>
+                    <li>Product images may differ slightly from actual products.</li>
+                    <li>Technical specifications may change according to product versions or manufacturer updates.</li>
+                    <li>Product availability is subject to stock and confirmation.</li>
+                    <li>Customers are encouraged to confirm specifications before placing an order.</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section class="tc-section">
+                <h3>4. Pricing and Payments</h3>
+
+                <p>
+                    All product prices are subject to confirmation at the
+                    time of quotation.
+                </p>
+
+                <p>
+                    CSTECH Survey &amp; Co reserves the right to revise
+                    prices, offers and promotional information without
+                    prior notice.
+                </p>
+
+                <p>
+                    Orders will be processed after payment terms and
+                    order details have been mutually confirmed.
+                </p>
+
+                <p>
+                    Applicable taxes, transportation charges and other
+                    additional costs will be communicated wherever applicable.
+                </p>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section class="tc-section">
+                <h3>5. Orders and Delivery</h3>
+
+                <p>
+                    Orders are subject to product availability and confirmation.
+                </p>
+
+                <p>
+                    Delivery timelines are estimates and may vary due to
+                    location, logistics, stock availability or circumstances
+                    beyond our control.
+                </p>
+
+                <p>
+                    Customers are responsible for providing accurate
+                    delivery information.
+                </p>
+            </section>
+
+            <!-- SECTION 6 -->
+            <section class="tc-section">
+                <h3>6. Warranty and Replacement</h3>
+
+                <p>
+                    Warranty and replacement coverage depend on the specific
+                    product and the applicable manufacturer or company
+                    warranty policy.
+                </p>
+
+                <p>
+                    Customers should review the warranty terms before purchasing.
+                </p>
+
+                <p>
+                    Any warranty or replacement claim must be supported by
+                    valid purchase documentation and is subject to inspection
+                    and verification.
+                </p>
+
+                <p>
+                    Warranty does not automatically cover physical damage,
+                    misuse, unauthorized repairs or damage resulting from
+                    improper handling.
+                </p>
+            </section>
+
+            <!-- SECTION 7 -->
+            <section class="tc-section">
+                <h3>7. Returns, Refunds and Cancellations</h3>
+
+                <p>
+                    Returns, refunds and order cancellations are subject to
+                    the applicable company policy and the conditions
+                    communicated at the time of purchase.
+                </p>
+
+                <p>
+                    Customers should contact our team before returning any product.
+                </p>
+
+                <p>
+                    Products must be returned with their original accessories,
+                    packaging and supporting documents, where applicable.
+                </p>
+
+                <p>
+                    Nothing in this section limits any rights available
+                    to consumers under applicable Indian law.
+                </p>
+            </section>
+
+            <!-- SECTION 8 -->
+            <section class="tc-section">
+                <h3>8. Customer Responsibilities</h3>
+
+                <p>Customers agree:</p>
+
+                <ul>
+                    <li>To provide accurate contact and order information.</li>
+                    <li>To use products according to their intended purpose and operating instructions.</li>
+                    <li>Not to misuse our website or services.</li>
+                    <li>Not to reproduce or misuse our company branding, content or intellectual property without permission.</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 9 -->
+            <section class="tc-section">
+                <h3>9. Intellectual Property</h3>
+
+                <p>
+                    All website content, including text, graphics, logos,
+                    photographs, videos and branding, belongs to CSTECH
+                    Survey &amp; Co or its respective owners and licensors.
+                </p>
+
+                <p>
+                    Unauthorized copying, reproduction, distribution or
+                    commercial use is prohibited without prior written permission.
+                </p>
+
+                <p>
+                    Third-party trademarks and product names remain the
+                    property of their respective owners.
+                </p>
+            </section>
+
+            <!-- SECTION 10 -->
+            <section class="tc-section">
+                <h3>10. Limitation of Liability</h3>
+
+                <p>
+                    CSTECH Survey &amp; Co shall not be responsible for
+                    indirect or consequential losses arising from the use
+                    of our website or products, to the extent permitted
+                    by applicable law.
+                </p>
+
+                <p>
+                    Customers are responsible for ensuring that the selected
+                    surveying equipment is suitable for their intended application.
+                </p>
+
+                <p>
+                    Nothing in these terms excludes liability that cannot
+                    legally be excluded under applicable law.
+                </p>
+            </section>
+
+            <!-- SECTION 11 -->
+            <section class="tc-section">
+                <h3>11. Privacy</h3>
+
+                <p>
+                    We respect customer privacy and handle personal
+                    information in accordance with our applicable Privacy
+                    Policy and Indian data protection laws.
+                </p>
+
+                <p>
+                    Information shared with us may be used for enquiries,
+                    quotations, order processing, customer support and
+                    relevant business communication, subject to applicable law.
+                </p>
+            </section>
+
+            <!-- SECTION 12 -->
+            <section class="tc-section">
+                <h3>12. Changes to These Terms</h3>
+
+                <p>
+                    CSTECH Survey &amp; Co reserves the right to update
+                    or modify these Terms of Service when necessary.
+                </p>
+
+                <p>
+                    Any updated version will be published on our website
+                    with a revised effective date.
+                </p>
+            </section>
+
+            <!-- SECTION 13 -->
+            <section class="tc-section">
+                <h3>13. Governing Law and Jurisdiction</h3>
+
+                <p>
+                    These Terms of Service shall be governed by the laws
+                    of India.
+                </p>
+
+                <p>
+                    Any disputes shall be subject to the jurisdiction of
+                    the competent courts in the applicable jurisdiction,
+                    subject to mandatory legal requirements.
+                </p>
+            </section>
+
+            <!-- SECTION 14 -->
+            <section class="tc-section">
+                <h3>14. Contact Information</h3>
+
+                <p>
+                    For questions, enquiries or concerns regarding these
+                    Terms of Service, please contact:
+                </p>
+
+                <div class="tc-contact-card">
+
+                    <h4>CSTECH SURVEY &amp; CO.</h4>
+
+                    <div class="tc-contact-item">
+                        <div class="tc-contact-icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <p>
+                            <strong>Website</strong><br>
+                            <a href="https://www.cstechsurvey.com">
+                                www.cstechsurvey.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="tc-contact-item">
+                        <div class="tc-contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p>
+                            <strong>Email</strong><br>
+                            <a href="mailto:info@cstechsurvey.com">
+                                info@cstechsurvey.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="tc-contact-item">
+                        <div class="tc-contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p>
+                            <strong>Phone</strong><br>
+                            <a href="tel:+919958507176">
+                                9958507176
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="tc-contact-item">
+                        <div class="tc-contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p>
+                            <strong>Address</strong><br>
+                            821, 8th Floor, Jaina Tower - 1,
+                            District Center, Janakpuri West,
+                            New Delhi - 110058
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- THANK YOU -->
+            <div class="tc-thank-you">
+                <h4>Thank You for Choosing CSTECH Survey &amp; Co.</h4>
+
+                <p>
+                    We appreciate your trust in our products and services.
+                    Your confidence motivates us to provide reliable
+                    surveying solutions and professional support.
+                </p>
+            </div>
+
+        </article>
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="tc-footer">
+    <div class="tc-footer-container">
+
+        <div class="tc-footer-grid">
+
+            <!-- COMPANY -->
+            <div class="tc-footer-about">
+
+                <a href="/index.html">
+                    <img
+                        class="tc-footer-logo"
+                        src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg"
+                        alt="CSTECH SURVEY & CO.">
+                </a>
+
+                <p>
+                    CSTECH Survey &amp; Co. provides professional surveying,
+                    geospatial and GNSS equipment solutions for surveyors,
+                    engineers and infrastructure professionals.
+                </p>
+
+                <div class="tc-footer-social">
+                    <a href="https://www.instagram.com/cstech_survey_india/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="mailto:info@cstechsurvey.com"
+                       aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div>
+                <h3>Quick Links</h3>
+
+                <ul class="tc-footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/products.html">Our Products</a></li>
+                    <li><a href="/industries.html">Industries</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- PRODUCTS -->
+            <div>
+                <h3>Our Products</h3>
+
+                <ul class="tc-footer-links">
+                    <li><a href="/products.html">GNSS Receivers</a></li>
+                    <li><a href="/products.html">Total Stations</a></li>
+                    <li><a href="/products.html">Auto Levels</a></li>
+                    <li><a href="/products.html">Survey Controllers</a></li>
+                    <li><a href="/products.html">Survey Accessories</a></li>
+                    <li><a href="/products.html">Survey Drones</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="tc-footer-contact">
+                <h3>Contact Information</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    &nbsp;821, 8th Floor, Jaina Tower - 1,
+                    District Center, Janakpuri West,
+                    New Delhi - 110058
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    &nbsp;<a href="tel:+919958507176">9958507176</a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    &nbsp;<a href="mailto:info@cstechsurvey.com">
+                        info@cstechsurvey.com
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-globe"></i>
+                    &nbsp;<a href="https://www.cstechsurvey.com">
+                        www.cstechsurvey.com
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- FOOTER BOTTOM -->
+        <div class="tc-footer-bottom">
+
+            <p>
+                &copy; <span id="tcCopyrightYear"></span>
+                CSTECH SURVEY &amp; CO. All Rights Reserved.
+            </p>
+
+            <div class="tc-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-and-conditions.html" class="active">Terms &amp; Conditions</a>
+                <a href="/shipping-policy.html">Shipping Policy</a>
+                <a href="/cancellation-return-refund.html">Cancellation &amp; Refund</a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="tc-back-top" id="tcBackTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+    // Mobile navigation toggle
+    const tcMenuToggle = document.getElementById("tcMenuToggle");
+    const tcNavigation = document.getElementById("tcNavigation");
+
+    tcMenuToggle.addEventListener("click", function () {
+        const isOpen = tcNavigation.classList.toggle("open");
+
+        tcMenuToggle.setAttribute("aria-expanded", isOpen);
+
+        tcMenuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // Close menu when navigation link clicked
+    tcNavigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            tcNavigation.classList.remove("open");
+            tcMenuToggle.setAttribute("aria-expanded", "false");
+            tcMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+    });
+
+    // Dynamic copyright year
+    document.getElementById("tcCopyrightYear").textContent =
+        new Date().getFullYear();
+
+    // Back to top
+    const tcBackTop = document.getElementById("tcBackTop");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 350) {
+            tcBackTop.classList.add("show");
+        } else {
+            tcBackTop.classList.remove("show");
+        }
+    });
+
+    tcBackTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+</body>
+</html>

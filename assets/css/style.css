@@ -9028,3 +9028,217 @@ width: 100%;
     color: #666;
     font-size: 18px;
 }
+
+
+/* ============ CS1 APPLICATION CARDS ============ */
+
+.cs1-applications-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.cs1-applications-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cs1-applications-grid > div {
+    margin-bottom: 30px;
+}
+
+.cs1-application-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.cs1-application-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.cs1-application-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.cs1-application-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.cs1-application-card:hover .cs1-application-image img {
+    transform: scale(1.05);
+}
+
+.cs1-application-content {
+    padding: 25px;
+}
+
+.cs1-application-content h4 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cs1-application-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .cs1-application-image {
+        height: 220px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .cs1-applications-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .cs1-application-image {
+        height: 220px;
+    }
+
+    .cs1-application-content {
+        padding: 20px;
+    }
+
+    .cs1-application-content h4 {
+        font-size: 19px;
+    }
+}
+
+
+/* Footer Policy Links */
+.footer-policy-links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-policy-links a {
+    color: #777;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-policy-links a:hover {
+    color: #e60023;
+}
+
+.footer-policy-links span {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .footer-policy-links {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .footer-policy-links a {
+        font-size: 12px;
+    }
+
+    .footer-policy-links span {
+        font-size: 12px;
+    }
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.footer-bottom p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-policy-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-policy-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.footer-policy-links a:hover {
+    color: #e31837;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-policy-links {
+        gap: 12px;
+    }
+}
+
+/* Footer Policy Links */
+.footer-policy-links a {
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.footer-policy-links a:hover {
+    color: #e31837 !important;
+    /* text-decoration: underline !important; */
+    transform: translateY(-2px);
+}
+
+/* Company name hover */
+.footer-bottom p a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom p a:hover {
+    color: #e31837 !important;
+}

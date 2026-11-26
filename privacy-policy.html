@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | CSTECH SURVEY &amp; CO.</title>
+  <meta name="description" content="CSTECH SURVEY &amp; CO. Privacy Policy explaining how we collect, use, protect and manage personal information.">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --cstech-red: #d71938;
+      --cstech-navy: #07113f;
+      --cstech-text: #404653;
+      --cstech-light: #f7f8fb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: var(--cstech-text); font-family: inherit; }
+
+    /* COMMON HEADER — keep this same on every policy/info page */
+    .shipping-header {
+      background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 999;
+    }
+    .shipping-header-inner {
+      max-width: 1200px; margin: auto; padding: 12px 20px; min-height: 85px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .shipping-logo img { max-height: 65px; max-width: 230px; object-fit: contain; display: block; }
+    .shipping-nav { display: flex; align-items: center; gap: 27px; }
+    .shipping-nav a {
+      text-decoration: none; color: var(--cstech-navy); font-size: 14px; font-weight: 600; transition: .3s;
+    }
+    .shipping-nav a:hover, .shipping-nav a.active { color: var(--cstech-red); }
+    .shipping-nav .nav-contact { background: var(--cstech-red); color: #fff; padding: 12px 20px; border-radius: 5px; }
+    .shipping-nav .nav-contact:hover { background: var(--cstech-navy); color: #fff; }
+    .shipping-menu-btn { display: none; background: transparent; border: 0; font-size: 27px; color: var(--cstech-navy); cursor: pointer; }
+
+    /* PAGE HERO */
+    .terms-hero {
+      background: linear-gradient(135deg, #07113f, #101f58); padding: 75px 20px; text-align: center;
+      color: #fff; position: relative; overflow: hidden;
+    }
+    .terms-hero::after {
+      content: ""; position: absolute; width: 350px; height: 350px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.08); right: -120px; top: -130px; pointer-events: none;
+    }
+    .terms-hero h1 { color: #fff; font-size: 42px; font-weight: 700; margin-bottom: 15px; }
+    .terms-hero p { color: #c8d2ef; margin: 0; font-size: 16px; }
+
+    /* PAGE CONTENT */
+    .terms-wrapper { padding: 70px 15px 90px; }
+    .terms-container { max-width: 1000px; margin: auto; }
+    .terms-intro {
+      background: var(--cstech-light); border-left: 4px solid var(--cstech-red);
+      padding: 28px 30px; border-radius: 8px; margin-bottom: 40px;
+    }
+    .terms-intro h2 { color: var(--cstech-navy); font-size: 24px; font-weight: 700; margin: 0 0 10px; }
+    .terms-date { color: var(--cstech-red); font-weight: 600; margin: 0; }
+    .terms-section { padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid #e8eaf0; }
+    .terms-section h2 { color: var(--cstech-navy); font-size: 23px; font-weight: 700; margin-bottom: 18px; line-height: 1.4; }
+    .terms-section h2 span { color: var(--cstech-red); }
+    .terms-section p { font-size: 15px; line-height: 1.85; margin-bottom: 14px; }
+    .terms-section ul { padding-left: 22px; margin: 12px 0 18px; }
+    .terms-section ul li { font-size: 15px; line-height: 1.8; margin-bottom: 7px; }
+    .terms-contact { background: #f7f8fb; border: 1px solid #e6e8ef; border-radius: 10px; padding: 25px 28px; margin-top: 20px; }
+    .terms-contact p { margin-bottom: 10px; line-height: 1.8; }
+    .terms-contact a { color: var(--cstech-red); text-decoration: none; word-break: break-word; }
+    .terms-contact a:hover { text-decoration: underline; }
+    .terms-thanks { text-align: center; background: var(--cstech-navy); color: #fff; padding: 35px 25px; border-radius: 10px; margin-top: 40px; }
+    .terms-thanks h3 { color: #fff; font-weight: 700; margin-bottom: 12px; }
+    .terms-thanks p { color: #d5def6; margin-bottom: 0; }
+    .terms-back { display: inline-block; margin-top: 30px; color: var(--cstech-red); font-weight: 600; text-decoration: none; }
+    .terms-back:hover { color: var(--cstech-navy); }
+
+    /* COMMON FOOTER — keep this same on every policy/info page */
+    .shipping-footer { background: #07113f; color: #d5def6; padding: 65px 20px 0; }
+    .shipping-footer-container { max-width: 1200px; margin: auto; }
+    .shipping-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 45px; padding-bottom: 45px; }
+    .shipping-footer h3, .shipping-footer h4 { color: #fff; margin-bottom: 20px; font-weight: 700; }
+    .shipping-footer h3 { font-size: 22px; }
+    .shipping-footer h4 { font-size: 17px; }
+    .shipping-footer p { color: #d5def6; font-size: 14px; line-height: 1.8; }
+    .shipping-footer a { display: block; color: #d5def6; text-decoration: none; margin-bottom: 12px; font-size: 14px; transition: .3s; }
+    .shipping-footer a:hover { color: #fff; padding-left: 3px; }
+    .shipping-footer-contact a { display: inline; }
+    .shipping-footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.15); padding: 20px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 15px;
+    }
+    .shipping-footer-bottom p { margin: 0; font-size: 13px; }
+    .shipping-footer-bottom-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .shipping-footer-bottom-links a { margin: 0; font-size: 13px; }
+
+    @media (max-width: 991px) {
+      .shipping-header-inner { padding: 12px 18px; }
+      .shipping-nav { gap: 16px; }
+      .shipping-nav a { font-size: 13px; }
+      .shipping-footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 767px) {
+      .shipping-header-inner { min-height: 75px; }
+      .shipping-logo img { max-width: 190px; max-height: 55px; }
+      .shipping-menu-btn { display: block; }
+      .shipping-nav {
+        display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff;
+        flex-direction: column; align-items: stretch; gap: 0; padding: 10px 20px 20px;
+        box-shadow: 0 8px 18px rgba(0,0,0,.08);
+      }
+      .shipping-nav.show { display: flex; }
+      .shipping-nav a { padding: 13px 5px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+      .shipping-nav .nav-contact { margin-top: 10px; text-align: center; border: 0; }
+      .terms-hero { padding: 50px 15px; }
+      .terms-hero h1 { font-size: 30px; }
+      .terms-hero p { font-size: 14px; }
+      .terms-wrapper { padding: 40px 15px 55px; }
+      .terms-intro { padding: 22px 20px; margin-bottom: 28px; }
+      .terms-intro h2 { font-size: 21px; }
+      .terms-section h2 { font-size: 20px; }
+      .terms-section p, .terms-section ul li { font-size: 14px; line-height: 1.8; }
+      .terms-contact { padding: 20px; }
+      .shipping-footer { padding: 45px 20px 0; }
+      .shipping-footer-grid { grid-template-columns: 1fr; gap: 25px; padding-bottom: 30px; }
+      .shipping-footer-bottom { flex-direction: column; text-align: center; }
+      .shipping-footer-bottom-links { justify-content: center; }
+    }
+  
+    /* Shared Terms page Header/Footer styling */
+    :root { --tc-navy:#071044; --tc-navy-light:#111e59; --tc-red:#d71935; --tc-text:#444b5b; --tc-muted:#72798b; --tc-light:#f5f7fb; --tc-border:#e8ebf2; --tc-white:#fff; }
+    .tc-header { width:100%; background:#fff; position:sticky; top:0; z-index:9999; box-shadow:0 2px 12px rgba(7,16,68,.07); }
+    .tc-header-inner { max-width:1320px; min-height:88px; padding:12px 24px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:25px; }
+    .tc-brand { display:flex; align-items:center; flex-shrink:0; } .tc-brand img { max-width:210px; max-height:65px; object-fit:contain; }
+    .tc-nav { display:flex; align-items:center; gap:27px; } .tc-nav a { color:var(--tc-navy); font-size:14px; font-weight:600; transition:.25s; text-decoration:none; }
+    .tc-nav a:hover,.tc-nav a.active { color:var(--tc-red); } .tc-nav .tc-contact-btn { padding:12px 21px; background:var(--tc-red); color:#fff; border-radius:4px; } .tc-nav .tc-contact-btn:hover { background:var(--tc-navy); color:#fff; }
+    .tc-menu-toggle { display:none; width:43px; height:43px; border:1px solid var(--tc-border); background:#fff; border-radius:5px; font-size:20px; color:var(--tc-navy); cursor:pointer; }
+    .tc-footer { background:#071044; color:#fff; padding:65px 20px 0; } .tc-footer-container { max-width:1320px; margin:auto; } .tc-footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:45px; }
+    .tc-footer-logo { max-width:210px; max-height:75px; object-fit:contain; object-position:left; margin-bottom:20px; background:#fff; padding:5px; border-radius:5px; }
+    .tc-footer h3 { color:#fff; font-size:17px; font-weight:700; margin-bottom:22px; } .tc-footer-about p,.tc-footer-contact p { color:#c4cbe1; font-size:14px; line-height:1.85; margin-bottom:12px; }
+    .tc-footer-links { list-style:none; padding:0; margin:0; } .tc-footer-links li { margin-bottom:12px; } .tc-footer-links a,.tc-footer-contact a { color:#c4cbe1; font-size:14px; text-decoration:none; transition:.25s; } .tc-footer-links a:hover,.tc-footer-contact a:hover { color:#ff536d; }
+    .tc-footer-social { display:flex; gap:10px; margin-top:18px; } .tc-footer-social a { width:38px;height:38px;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#fff;background:rgba(255,255,255,.1);transition:.25s; } .tc-footer-social a:hover { background:var(--tc-red); transform:translateY(-3px); }
+    .tc-footer-bottom { border-top:1px solid rgba(255,255,255,.12); padding:22px 0; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; } .tc-footer-bottom p { color:#aeb8d5; font-size:13px; margin:0; } .tc-legal-links { display:flex; gap:20px; flex-wrap:wrap; } .tc-legal-links a { color:#c4cbe1; font-size:13px; text-decoration:none; transition:.2s; } .tc-legal-links a:hover,.tc-legal-links a.active { color:#ff536d; }
+    .tc-back-top { position:fixed; bottom:25px; right:25px; width:45px;height:45px;background:var(--tc-red);color:#fff;border:0;border-radius:5px;font-size:17px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:1000;box-shadow:0 5px 20px rgba(21,25,53,.25); } .tc-back-top:hover { background:var(--tc-navy); } .tc-back-top.show { display:flex; }
+    @media(max-width:1000px){ .tc-header-inner{min-height:75px}.tc-brand img{max-width:175px}.tc-nav{gap:16px}.tc-nav a{font-size:13px}.tc-footer-grid{grid-template-columns:1fr 1fr;gap:35px} }
+    @media(max-width:767px){ .tc-header-inner{min-height:72px;padding:10px 16px}.tc-brand img{max-width:165px;max-height:55px}.tc-menu-toggle{display:inline-flex;justify-content:center;align-items:center}.tc-nav{display:none;position:absolute;top:100%;left:0;width:100%;background:#fff;padding:12px 20px 22px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 12px 20px rgba(7,16,68,.12)}.tc-nav.open{display:flex}.tc-nav a{display:block;padding:13px 5px;border-bottom:1px solid #f0f1f5;font-size:14px}.tc-nav .tc-contact-btn{text-align:center;margin-top:12px;border-bottom:0}.tc-footer{padding:45px 18px 0}.tc-footer-grid{grid-template-columns:1fr;gap:28px}.tc-footer-bottom{flex-direction:column;align-items:flex-start}.tc-legal-links{gap:13px}.tc-back-top{bottom:15px;right:15px}}
+    @media(max-width:380px){.tc-brand img{max-width:145px}}
+
+  </style>
+</head>
+<body>
+
+  <!-- SAME HEADER/NAV AS TERMS & CONDITIONS -->
+  <header class="tc-header">
+    <div class="tc-header-inner">
+      <a href="/index.html" class="tc-brand"><img src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg" alt="CSTECH Survey & Co Logo"></a>
+      <button class="tc-menu-toggle" id="tcMenuToggle" aria-label="Toggle Navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="tc-nav" id="tcNavigation">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/products.html">Products</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/careers.html">Careers</a>
+        <a href="/contact.html" class="tc-contact-btn">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="terms-hero">
+    <h1>Privacy Policy</h1>
+    <p>How CSTECH SURVEY &amp; CO. collects, uses, safeguards and manages your information</p>
+  </section>
+
+  <section class="terms-wrapper">
+    <div class="terms-container">
+      <div class="terms-intro">
+        <h2>PRIVACY POLICY</h2>
+        <p class="terms-date">CSTECH SURVEY &amp; CO. | Effective Date: November 2026</p>
+        <p>CSTECH SURVEY &amp; CO. respects your privacy and is committed to protecting the personal information you share with us when you visit our website, contact us, request a quotation, purchase products or use our services.</p>
+        <p>This Privacy Policy explains what information we may collect, how we use it, when it may be shared, and the measures we take to protect it. By using our website or interacting with us, you acknowledge this policy.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>01.</span> Information We Collect</h2>
+        <p>Depending on how you interact with CSTECH SURVEY &amp; CO., we may collect the following information:</p>
+        <ul>
+          <li>Contact details such as your name, phone number, email address and business/company name.</li>
+          <li>Enquiry and quotation details, including product interests, messages, requirements and information you choose to provide.</li>
+          <li>Order and transaction information, such as products purchased, billing details, delivery address, order references and payment status. Payment card or banking credentials are handled by the payment provider and are not intended to be stored by us unless explicitly required and securely supported.</li>
+          <li>Technical information such as IP address, browser type, device information, pages visited, approximate usage data and cookie identifiers, where collected through our website or analytics tools.</li>
+          <li>Communication records when you contact our sales, support or service team.</li>
+        </ul>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>02.</span> How We Collect Information</h2>
+        <p>Information may be collected when you submit a contact or enquiry form, request a quotation, place an order, subscribe or opt in to communications, contact us by email or phone, or browse and interact with our website. Certain technical information may be collected automatically through cookies, server logs or analytics technologies.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>03.</span> How We Use Your Information</h2>
+        <p>We may use information we collect for legitimate business purposes, including to:</p>
+        <ul>
+          <li>Respond to enquiries, provide quotations, product information and customer support.</li>
+          <li>Process orders, payments, deliveries, service requests and warranty-related communications.</li>
+          <li>Maintain, operate, secure and improve our website, products and services.</li>
+          <li>Communicate important updates about orders, products, service, policy changes or security matters.</li>
+          <li>Prevent fraud, misuse, unauthorized access and other activities that may affect customers or our business.</li>
+          <li>Comply with applicable legal, regulatory, accounting and record-keeping obligations.</li>
+        </ul>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>04.</span> Cookies &amp; Analytics</h2>
+        <p>Our website may use cookies or similar technologies to remember preferences, support website functionality, understand website traffic and improve user experience. You can manage cookies through your browser settings. Disabling certain cookies may affect some website features.</p>
+        <p>If analytics tools are used, they may process technical and usage information in accordance with their own privacy terms and settings.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>05.</span> Sharing &amp; Disclosure</h2>
+        <p>We do not sell your personal information. We may share information only when reasonably necessary with trusted service providers such as payment processors, delivery partners, hosting providers, website/analytics vendors, manufacturers or authorized service partners to fulfill your requests or support our operations; when required by law, legal process or a lawful government request; to protect our rights, customers, property or security; or as part of a business restructuring or transfer, subject to appropriate safeguards.</p>
+        <p>Service providers are expected to handle information responsibly and only for relevant purposes, subject to their applicable agreements and privacy obligations.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>06.</span> Payment Information</h2>
+        <p>Payments made through our website may be processed by third-party payment gateways. Payment providers may collect and process payment details under their own privacy and security practices. We may receive transaction references, payment status and related details necessary to confirm and reconcile orders. Please do not send full card numbers, passwords, OTPs or other sensitive payment credentials to us by email or message.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>07.</span> Data Security &amp; Retention</h2>
+        <p>We use reasonable administrative, technical and organizational safeguards designed to protect information against unauthorized access, loss, misuse, alteration or disclosure. However, no internet transmission or electronic storage system can be guaranteed to be completely secure.</p>
+        <p>We retain information for as long as reasonably required to provide services, maintain business and transaction records, resolve disputes, enforce agreements and meet legal obligations. When information is no longer required, we take reasonable steps to delete it or securely dispose of it, subject to applicable law.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>08.</span> Your Choices &amp; Rights</h2>
+        <p>Subject to applicable law, you may request access to, correction or updating of personal information you have provided, ask questions about its use, or request deletion where we are legally and operationally able to do so. You may also opt out of promotional communications at any time by contacting us. Necessary service, transaction or legal notices may still be sent.</p>
+        <p>To make a privacy-related request, contact us using the details below. We may need to verify your identity before processing certain requests.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>09.</span> Third-Party Websites &amp; Services</h2>
+        <p>Our website may contain links to third-party websites, payment services, social platforms or other external services. These services are operated independently and their privacy practices are governed by their own policies. We encourage you to review those policies before providing information to them. We are not responsible for the privacy practices or content of third-party websites that we do not control.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>10.</span> Children’s Privacy</h2>
+        <p>Our products and website are intended for business customers, professionals and general users, and are not directed specifically to children. We do not knowingly collect personal information from children in violation of applicable law. If you believe a child has provided personal information to us, please contact us so we can review and take appropriate action.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2><span>11.</span> Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes to our business, website, services, technology or legal requirements. Updated versions will be published on this page with a revised effective date. Please review this page periodically.</p>
+      </div>
+
+      <div class="terms-section terms-contact">
+        <h2><span>12.</span> Contact Us &amp; Privacy Queries</h2>
+        <p>If you have questions, concerns or requests regarding this Privacy Policy or your personal information, contact:</p>
+        <p><strong>Company:</strong> CSTECH SURVEY &amp; CO.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@cstechsurvey.com">info@cstechsurvey.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919958507176">+91 9958507176</a></p>
+        <p><strong>Website:</strong> <a href="https://www.cstechsurvey.com" target="_blank" rel="noopener noreferrer">www.cstechsurvey.com</a></p>
+        <p><strong>Address:</strong> 821, 8th Floor, Jaina Tower - 1, District Center, Janakpuri West, New Delhi - 110058, India.</p>
+      </div>
+
+      <div class="terms-thanks"><h3>Your Privacy Matters</h3><p>We appreciate your trust in CSTECH SURVEY &amp; CO. and are committed to handling your information responsibly.</p></div>
+      <div class="text-center"><a href="/index.html" class="terms-back">&larr; Back to Home</a></div>
+    </div>
+  </section>
+
+  <!-- SAME FOOTER AS TERMS & CONDITIONS -->
+  <footer class="tc-footer">
+    <div class="tc-footer-container">
+      <div class="tc-footer-grid">
+        <div class="tc-footer-about">
+          <a href="/index.html"><img class="tc-footer-logo" src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg" alt="CSTECH SURVEY & CO."></a>
+          <p>CSTECH Survey & Co. provides professional surveying, geospatial and GNSS equipment solutions for surveyors, engineers and infrastructure professionals.</p>
+          <div class="tc-footer-social">
+            <a href="https://www.instagram.com/cstech_survey_india/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:info@cstechsurvey.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div><h3>Quick Links</h3><ul class="tc-footer-links">
+          <li><a href="/index.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/products.html">Our Products</a></li><li><a href="/industries.html">Industries</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/contact.html">Contact Us</a></li>
+        </ul></div>
+        <div><h3>Our Products</h3><ul class="tc-footer-links">
+          <li><a href="/products.html">GNSS Receivers</a></li><li><a href="/products.html">Total Stations</a></li><li><a href="/products.html">Auto Levels</a></li><li><a href="/products.html">Survey Controllers</a></li><li><a href="/products.html">Survey Accessories</a></li><li><a href="/products.html">Survey Drones</a></li>
+        </ul></div>
+        <div class="tc-footer-contact"><h3>Contact Information</h3>
+          <p><i class="fa-solid fa-location-dot"></i> &nbsp;821, 8th Floor, Jaina Tower - 1, District Center, Janakpuri West, New Delhi - 110058</p>
+          <p><i class="fa-solid fa-phone"></i> &nbsp;<a href="tel:+919958507176">9958507176</a></p>
+          <p><i class="fa-solid fa-envelope"></i> &nbsp;<a href="mailto:info@cstechsurvey.com">info@cstechsurvey.com</a></p>
+          <p><i class="fa-solid fa-globe"></i> &nbsp;<a href="https://www.cstechsurvey.com">www.cstechsurvey.com</a></p>
+        </div>
+      </div>
+      <div class="tc-footer-bottom"><p>&copy; <span id="tcCopyrightYear"></span> CSTECH SURVEY &amp; CO. All Rights Reserved.</p>
+        <div class="tc-legal-links"><a href="/privacy-policy.html" class="active">Privacy Policy</a><a href="/terms-and-conditions.html">Terms &amp; Conditions</a><a href="/shipping-policy.html" >Shipping Policy</a><a href="/cancellation-return-refund.html">Cancellation &amp; Refund</a></div>
+      </div>
+    </div>
+  </footer>
+  <button class="tc-back-top" id="tcBackTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script>
+    const tcMenuToggle = document.getElementById("tcMenuToggle");
+    const tcNavigation = document.getElementById("tcNavigation");
+    tcMenuToggle.addEventListener("click", function () {
+      const isOpen = tcNavigation.classList.toggle("open");
+      tcMenuToggle.setAttribute("aria-expanded", isOpen);
+      tcMenuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    tcNavigation.querySelectorAll("a").forEach(function(link){ link.addEventListener("click", function(){ tcNavigation.classList.remove("open"); tcMenuToggle.setAttribute("aria-expanded","false"); tcMenuToggle.innerHTML='<i class="fa-solid fa-bars"></i>'; }); });
+    document.getElementById("tcCopyrightYear").textContent = new Date().getFullYear();
+    const tcBackTop = document.getElementById("tcBackTop");
+    window.addEventListener("scroll", function(){ if(window.scrollY > 350){tcBackTop.classList.add("show");}else{tcBackTop.classList.remove("show");} });
+    tcBackTop.addEventListener("click", function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+    </script>
+</body>
+</html>
