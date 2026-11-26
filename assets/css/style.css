@@ -9121,3 +9121,124 @@ width: 100%;
         font-size: 19px;
     }
 }
+
+
+/* Footer Policy Links */
+.footer-policy-links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-policy-links a {
+    color: #777;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-policy-links a:hover {
+    color: #e60023;
+}
+
+.footer-policy-links span {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .footer-policy-links {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .footer-policy-links a {
+        font-size: 12px;
+    }
+
+    .footer-policy-links span {
+        font-size: 12px;
+    }
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.footer-bottom p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-policy-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-policy-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.footer-policy-links a:hover {
+    color: #e31837;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-policy-links {
+        gap: 12px;
+    }
+}
+
+/* Footer Policy Links */
+.footer-policy-links a {
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.footer-policy-links a:hover {
+    color: #e31837 !important;
+    /* text-decoration: underline !important; */
+    transform: translateY(-2px);
+}
+
+/* Company name hover */
+.footer-bottom p a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom p a:hover {
+    color: #e31837 !important;
+}

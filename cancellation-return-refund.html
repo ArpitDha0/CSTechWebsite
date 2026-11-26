@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancellation, Return, Refund &amp; Warranty Policy | CSTECH SURVEY &amp; CO.</title>
+  <meta name="description" content="CSTECH Survey &amp; Co. shipping policy covering order processing, delivery, shipping charges, tracking, damaged products and delivery enquiries.">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --cstech-red: #d71938;
+      --cstech-navy: #07113f;
+      --cstech-text: #404653;
+      --cstech-light: #f7f8fb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: var(--cstech-text); font-family: inherit; }
+
+    /* COMMON HEADER — keep this same on every policy/info page */
+    .shipping-header {
+      background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 999;
+    }
+    .shipping-header-inner {
+      max-width: 1200px; margin: auto; padding: 12px 20px; min-height: 85px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .shipping-logo img { max-height: 65px; max-width: 230px; object-fit: contain; display: block; }
+    .shipping-nav { display: flex; align-items: center; gap: 27px; }
+    .shipping-nav a {
+      text-decoration: none; color: var(--cstech-navy); font-size: 14px; font-weight: 600; transition: .3s;
+    }
+    .shipping-nav a:hover, .shipping-nav a.active { color: var(--cstech-red); }
+    .shipping-nav .nav-contact { background: var(--cstech-red); color: #fff; padding: 12px 20px; border-radius: 5px; }
+    .shipping-nav .nav-contact:hover { background: var(--cstech-navy); color: #fff; }
+    .shipping-menu-btn { display: none; background: transparent; border: 0; font-size: 27px; color: var(--cstech-navy); cursor: pointer; }
+
+    /* PAGE HERO */
+    .terms-hero {
+      background: linear-gradient(135deg, #07113f, #101f58); padding: 75px 20px; text-align: center;
+      color: #fff; position: relative; overflow: hidden;
+    }
+    .terms-hero::after {
+      content: ""; position: absolute; width: 350px; height: 350px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.08); right: -120px; top: -130px; pointer-events: none;
+    }
+    .terms-hero h1 { color: #fff; font-size: 42px; font-weight: 700; margin-bottom: 15px; }
+    .terms-hero p { color: #c8d2ef; margin: 0; font-size: 16px; }
+
+    /* PAGE CONTENT */
+    .terms-wrapper { padding: 70px 15px 90px; }
+    .terms-container { max-width: 1000px; margin: auto; }
+    .terms-intro {
+      background: var(--cstech-light); border-left: 4px solid var(--cstech-red);
+      padding: 28px 30px; border-radius: 8px; margin-bottom: 40px;
+    }
+    .terms-intro h2 { color: var(--cstech-navy); font-size: 24px; font-weight: 700; margin: 0 0 10px; }
+    .terms-date { color: var(--cstech-red); font-weight: 600; margin: 0; }
+    .terms-section { padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid #e8eaf0; }
+    .terms-section h2 { color: var(--cstech-navy); font-size: 23px; font-weight: 700; margin-bottom: 18px; line-height: 1.4; }
+    .terms-section h2 span { color: var(--cstech-red); }
+    .terms-section p { font-size: 15px; line-height: 1.85; margin-bottom: 14px; }
+    .terms-section ul { padding-left: 22px; margin: 12px 0 18px; }
+    .terms-section ul li { font-size: 15px; line-height: 1.8; margin-bottom: 7px; }
+    .terms-contact { background: #f7f8fb; border: 1px solid #e6e8ef; border-radius: 10px; padding: 25px 28px; margin-top: 20px; }
+    .terms-contact p { margin-bottom: 10px; line-height: 1.8; }
+    .terms-contact a { color: var(--cstech-red); text-decoration: none; word-break: break-word; }
+    .terms-contact a:hover { text-decoration: underline; }
+    .terms-thanks { text-align: center; background: var(--cstech-navy); color: #fff; padding: 35px 25px; border-radius: 10px; margin-top: 40px; }
+    .terms-thanks h3 { color: #fff; font-weight: 700; margin-bottom: 12px; }
+    .terms-thanks p { color: #d5def6; margin-bottom: 0; }
+    .terms-back { display: inline-block; margin-top: 30px; color: var(--cstech-red); font-weight: 600; text-decoration: none; }
+    .terms-back:hover { color: var(--cstech-navy); }
+
+    /* COMMON FOOTER — keep this same on every policy/info page */
+    .shipping-footer { background: #07113f; color: #d5def6; padding: 65px 20px 0; }
+    .shipping-footer-container { max-width: 1200px; margin: auto; }
+    .shipping-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 45px; padding-bottom: 45px; }
+    .shipping-footer h3, .shipping-footer h4 { color: #fff; margin-bottom: 20px; font-weight: 700; }
+    .shipping-footer h3 { font-size: 22px; }
+    .shipping-footer h4 { font-size: 17px; }
+    .shipping-footer p { color: #d5def6; font-size: 14px; line-height: 1.8; }
+    .shipping-footer a { display: block; color: #d5def6; text-decoration: none; margin-bottom: 12px; font-size: 14px; transition: .3s; }
+    .shipping-footer a:hover { color: #fff; padding-left: 3px; }
+    .shipping-footer-contact a { display: inline; }
+    .shipping-footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.15); padding: 20px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 15px;
+    }
+    .shipping-footer-bottom p { margin: 0; font-size: 13px; }
+    .shipping-footer-bottom-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .shipping-footer-bottom-links a { margin: 0; font-size: 13px; }
+
+    @media (max-width: 991px) {
+      .shipping-header-inner { padding: 12px 18px; }
+      .shipping-nav { gap: 16px; }
+      .shipping-nav a { font-size: 13px; }
+      .shipping-footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 767px) {
+      .shipping-header-inner { min-height: 75px; }
+      .shipping-logo img { max-width: 190px; max-height: 55px; }
+      .shipping-menu-btn { display: block; }
+      .shipping-nav {
+        display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff;
+        flex-direction: column; align-items: stretch; gap: 0; padding: 10px 20px 20px;
+        box-shadow: 0 8px 18px rgba(0,0,0,.08);
+      }
+      .shipping-nav.show { display: flex; }
+      .shipping-nav a { padding: 13px 5px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+      .shipping-nav .nav-contact { margin-top: 10px; text-align: center; border: 0; }
+      .terms-hero { padding: 50px 15px; }
+      .terms-hero h1 { font-size: 30px; }
+      .terms-hero p { font-size: 14px; }
+      .terms-wrapper { padding: 40px 15px 55px; }
+      .terms-intro { padding: 22px 20px; margin-bottom: 28px; }
+      .terms-intro h2 { font-size: 21px; }
+      .terms-section h2 { font-size: 20px; }
+      .terms-section p, .terms-section ul li { font-size: 14px; line-height: 1.8; }
+      .terms-contact { padding: 20px; }
+      .shipping-footer { padding: 45px 20px 0; }
+      .shipping-footer-grid { grid-template-columns: 1fr; gap: 25px; padding-bottom: 30px; }
+      .shipping-footer-bottom { flex-direction: column; text-align: center; }
+      .shipping-footer-bottom-links { justify-content: center; }
+    }
+  
+    /* Shared Terms page Header/Footer styling */
+    :root { --tc-navy:#071044; --tc-navy-light:#111e59; --tc-red:#d71935; --tc-text:#444b5b; --tc-muted:#72798b; --tc-light:#f5f7fb; --tc-border:#e8ebf2; --tc-white:#fff; }
+    .tc-header { width:100%; background:#fff; position:sticky; top:0; z-index:9999; box-shadow:0 2px 12px rgba(7,16,68,.07); }
+    .tc-header-inner { max-width:1320px; min-height:88px; padding:12px 24px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:25px; }
+    .tc-brand { display:flex; align-items:center; flex-shrink:0; } .tc-brand img { max-width:210px; max-height:65px; object-fit:contain; }
+    .tc-nav { display:flex; align-items:center; gap:27px; } .tc-nav a { color:var(--tc-navy); font-size:14px; font-weight:600; transition:.25s; text-decoration:none; }
+    .tc-nav a:hover,.tc-nav a.active { color:var(--tc-red); } .tc-nav .tc-contact-btn { padding:12px 21px; background:var(--tc-red); color:#fff; border-radius:4px; } .tc-nav .tc-contact-btn:hover { background:var(--tc-navy); color:#fff; }
+    .tc-menu-toggle { display:none; width:43px; height:43px; border:1px solid var(--tc-border); background:#fff; border-radius:5px; font-size:20px; color:var(--tc-navy); cursor:pointer; }
+    .tc-footer { background:#071044; color:#fff; padding:65px 20px 0; } .tc-footer-container { max-width:1320px; margin:auto; } .tc-footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:45px; }
+    .tc-footer-logo { max-width:210px; max-height:75px; object-fit:contain; object-position:left; margin-bottom:20px; background:#fff; padding:5px; border-radius:5px; }
+    .tc-footer h3 { color:#fff; font-size:17px; font-weight:700; margin-bottom:22px; } .tc-footer-about p,.tc-footer-contact p { color:#c4cbe1; font-size:14px; line-height:1.85; margin-bottom:12px; }
+    .tc-footer-links { list-style:none; padding:0; margin:0; } .tc-footer-links li { margin-bottom:12px; } .tc-footer-links a,.tc-footer-contact a { color:#c4cbe1; font-size:14px; text-decoration:none; transition:.25s; } .tc-footer-links a:hover,.tc-footer-contact a:hover { color:#ff536d; }
+    .tc-footer-social { display:flex; gap:10px; margin-top:18px; } .tc-footer-social a { width:38px;height:38px;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#fff;background:rgba(255,255,255,.1);transition:.25s; } .tc-footer-social a:hover { background:var(--tc-red); transform:translateY(-3px); }
+    .tc-footer-bottom { border-top:1px solid rgba(255,255,255,.12); padding:22px 0; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; } .tc-footer-bottom p { color:#aeb8d5; font-size:13px; margin:0; } .tc-legal-links { display:flex; gap:20px; flex-wrap:wrap; } .tc-legal-links a { color:#c4cbe1; font-size:13px; text-decoration:none; transition:.2s; } .tc-legal-links a:hover,.tc-legal-links a.active { color:#ff536d; }
+    .tc-back-top { position:fixed; bottom:25px; right:25px; width:45px;height:45px;background:var(--tc-red);color:#fff;border:0;border-radius:5px;font-size:17px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:1000;box-shadow:0 5px 20px rgba(21,25,53,.25); } .tc-back-top:hover { background:var(--tc-navy); } .tc-back-top.show { display:flex; }
+    @media(max-width:1000px){ .tc-header-inner{min-height:75px}.tc-brand img{max-width:175px}.tc-nav{gap:16px}.tc-nav a{font-size:13px}.tc-footer-grid{grid-template-columns:1fr 1fr;gap:35px} }
+    @media(max-width:767px){ .tc-header-inner{min-height:72px;padding:10px 16px}.tc-brand img{max-width:165px;max-height:55px}.tc-menu-toggle{display:inline-flex;justify-content:center;align-items:center}.tc-nav{display:none;position:absolute;top:100%;left:0;width:100%;background:#fff;padding:12px 20px 22px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 12px 20px rgba(7,16,68,.12)}.tc-nav.open{display:flex}.tc-nav a{display:block;padding:13px 5px;border-bottom:1px solid #f0f1f5;font-size:14px}.tc-nav .tc-contact-btn{text-align:center;margin-top:12px;border-bottom:0}.tc-footer{padding:45px 18px 0}.tc-footer-grid{grid-template-columns:1fr;gap:28px}.tc-footer-bottom{flex-direction:column;align-items:flex-start}.tc-legal-links{gap:13px}.tc-back-top{bottom:15px;right:15px}}
+    @media(max-width:380px){.tc-brand img{max-width:145px}}
+
+  </style>
+</head>
+<body>
+
+  <!-- SAME HEADER/NAV AS TERMS & CONDITIONS -->
+  <header class="tc-header">
+    <div class="tc-header-inner">
+      <a href="/index.html" class="tc-brand"><img src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg" alt="CSTECH Survey & Co Logo"></a>
+      <button class="tc-menu-toggle" id="tcMenuToggle" aria-label="Toggle Navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="tc-nav" id="tcNavigation">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/products.html">Products</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/careers.html">Careers</a>
+        <a href="/contact.html" class="tc-contact-btn">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="terms-hero">
+    <h1>Cancellation, Return, Refund &amp; Warranty Policy</h1>
+    <p>Transparent terms for cancellations, returns, refunds, replacements and warranty support</p>
+  </section>
+
+  <section class="terms-wrapper">
+    <div class="terms-container">
+      <div class="terms-intro">
+        <h2>CANCELLATION, RETURN, REFUND &amp; WARRANTY POLICY</h2>
+        <p class="terms-date">CSTECH SURVEY &amp; CO. | Effective Date: November 2026</p>
+        <p>CSTECH SURVEY &amp; CO. is committed to providing quality surveying instruments and professional equipment, including GNSS Receivers, DGPS, Total Stations and Auto Levels.</p>
+        <p>We strive to ensure customer satisfaction through transparent sales practices, reliable product support and responsible after-sales service.</p>
+        <p>This policy outlines the terms and procedures applicable to order cancellations, product returns, replacements, refunds and warranty claims for products purchased from CSTECH SURVEY &amp; CO.</p>
+      </div>
+      <div class="terms-section">
+        <h2><span>01.</span> Order Cancellation</h2>
+        <ul>
+          <li>Customers may request cancellation within 24 hours of order confirmation, provided the order has not been dispatched or committed to a non-cancellable special order.</li>
+          <li>Once an order has been dispatched, cancellation may not be possible. Customers should contact our support team for assistance.</li>
+          <li>Bulk orders, customized products and special-order equipment may be subject to specific cancellation terms communicated before order confirmation.</li>
+          <li>Cancellation requests must be submitted through our official customer support email or phone number.</li>
+          <li>Any approved cancellation and applicable refund will be processed in accordance with the agreed order terms and applicable laws.</li>
+          <li>No cancellation charge will be imposed contrary to applicable consumer protection requirements.</li>
+        </ul>
+      </div>
+      <div class="terms-section">
+        <h2><span>02.</span> Return Policy</h2>
+        <p>Due to the specialized nature and high value of surveying instruments, returns are subject to verification and approval.</p>
+        <ul>
+          <li>Change-of-mind returns may not be accepted for specially ordered, customized or specification-based equipment, subject to applicable consumer rights.</li>
+          <li>Products that are defective, damaged during transit, incorrect, incomplete or materially different from their agreed description may be eligible for repair, replacement, return or refund.</li>
+          <li>Customers should retain the original packaging, accessories, manuals, warranty documents and purchase invoice.</li>
+          <li>Customers must obtain a Return Merchandise Authorization (RMA) from CSTECH SURVEY &amp; CO. before returning a product.</li>
+          <li>Products must be returned in a condition that permits proper inspection, except where damage or defects make this impossible.</li>
+          <li>Return requests will be evaluated individually based on the nature of the issue and applicable law.</li>
+        </ul>
+      </div>
+      <div class="terms-section">
+        <h2><span>03.</span> Defective Products &amp; RMA Process</h2>
+        <p>In case of manufacturing defects, missing items or transit damage, customers should contact our support team as soon as reasonably possible, preferably within 2–5 days of delivery.</p>
+        <h3>An RMA request should include:</h3>
+        <ul><li>Order number and invoice details.</li><li>Product name, model and serial number.</li><li>Description of the reported issue.</li><li>Supporting photographs or videos, wherever applicable.</li><li>Photographs of the outer packaging and damaged product in case of transit damage.</li></ul>
+        <h3>Additional Conditions</h3>
+        <ul>
+          <li>Customers should retain the original packaging until the issue has been assessed.</li>
+          <li>Products approved for RMA should be returned with the original accessories and supplied documents, wherever applicable.</li>
+          <li>Returned products may undergo technical inspection and verification.</li>
+          <li>Following inspection, eligible products may be repaired, replaced or refunded, depending on the nature of the issue, product availability, applicable warranty terms and consumer protection laws.</li>
+          <li>Repair or replacement may be offered as an appropriate resolution where legally permissible.</li>
+        </ul>
+      </div>
+      <div class="terms-section">
+        <h2><span>04.</span> Refund Policy</h2>
+        <p>Refunds may be approved in the following circumstances:</p>
+        <ul><li>A product is confirmed to have an eligible defect that cannot reasonably be rectified.</li><li>A replacement is unavailable or unsuitable as a lawful resolution.</li><li>An order is successfully cancelled before dispatch.</li><li>A refund is otherwise required under applicable law or the agreed terms of sale.</li></ul>
+        <h3>Refund Processing</h3>
+        <ul>
+          <li>Approved refunds will generally be initiated within 7–14 business days after approval and completion of the required verification.</li>
+          <li>Online payment refunds will normally be processed through the original payment method.</li>
+          <li>Actual credit timelines may depend on the bank, card issuer or payment service provider.</li>
+          <li>Shipping, handling and installation charges will be assessed according to the reason for the return and applicable law. Such charges will not automatically be treated as non-refundable.</li>
+          <li>Customers will be informed if additional information or documentation is required.</li>
+        </ul>
+      </div>
+      <div class="terms-section">
+        <h2><span>05.</span> Warranty Policy</h2>
+        <p>Warranty coverage is subject to the applicable manufacturer's or supplier's written warranty terms for the particular product.</p>
+        <ul>
+          <li>Warranty duration and coverage may vary according to brand, model and product category.</li>
+          <li>The applicable warranty period will be communicated at the time of purchase or specified in the warranty documentation.</li>
+          <li>Customers must retain the original purchase invoice and product serial number for warranty claims.</li>
+          <li>Warranty claims may be declined where the reported damage is attributable to misuse, unauthorized repairs, physical damage, improper installation, negligence or normal wear and tear, subject to the actual warranty terms and applicable law.</li>
+          <li>Battery, charger, cables, accessories and consumable components may have separate warranty conditions.</li>
+          <li>CSTECH SURVEY &amp; CO. will assist customers in coordinating eligible warranty claims with the relevant manufacturer or supplier.</li>
+          <li>Warranty service will be provided in accordance with the applicable warranty terms.</li>
+        </ul>
+      </div>
+      <div class="terms-section">
+        <h2><span>06.</span> Product Inspection &amp; Verification</h2>
+        <p>To maintain transparency and protect both customers and the company, CSTECH SURVEY &amp; CO. may maintain product inspection records.</p>
+        <p>These may include:</p>
+        <ul><li>Product model and serial number verification.</li><li>Pre-dispatch functional testing, wherever applicable.</li><li>Verification of supplied accessories and components.</li><li>Product condition and packaging records.</li><li>Inspection reports for products received under an approved RMA request.</li></ul>
+        <p>The outcome of an inspection will be communicated to the customer. Inspection findings will be considered alongside the applicable warranty terms and consumer protection laws.</p>
+      </div>
+      <div class="terms-section">
+        <h2><span>07.</span> Delivery &amp; Transit Damage</h2>
+        <p>Customers are encouraged to inspect the delivered package and equipment upon receipt.</p>
+        <ul><li>Any visible damage to the package or equipment should be documented through photographs or videos.</li><li>Transit damage, missing accessories or incorrect deliveries should be reported to CSTECH SURVEY &amp; CO. as soon as reasonably possible, preferably within 2–5 days of delivery.</li><li>Customers should retain the original packaging and shipping materials until the matter is resolved.</li><li>Delivery-related complaints will be reviewed with the relevant logistics or courier partner, wherever necessary.</li><li>Reporting periods are intended to facilitate timely investigation and will not override any rights available under applicable law.</li></ul>
+      </div>
+      <div class="terms-section">
+        <h2><span>08.</span> Final Inspection &amp; Resolution</h2>
+        <ul><li>Products returned under an approved RMA request may be inspected by our technical team or the authorized manufacturer/service centre.</li><li>The final findings and proposed resolution will be communicated to the customer after verification.</li><li>Any repair, replacement or refund will be handled according to the applicable product warranty, agreed terms of sale and consumer protection laws.</li><li>Nothing in this policy is intended to exclude, restrict or limit any statutory rights or remedies available to customers under applicable law.</li></ul>
+      </div>
+      <div class="terms-section terms-contact">
+        <h2><span>09.</span> Customer Grievance &amp; Support</h2>
+        <p>For assistance regarding order cancellation, returns, refunds, replacements, product defects or warranty claims, please contact:</p>
+        <p><strong>Company:</strong> CSTECH SURVEY &amp; CO.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@cstechsurvey.com">info@cstechsurvey.com</a> | <a href="mailto:service@cstechsurvey.com">service@cstechsurvey.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:8750244121">8750244121</a> | <a href="tel:9958507176">9958507176</a></p>
+        <p><strong>Business Address:</strong> 821, 8th Floor, Jaina Tower-1, District Centre, Janakpuri West, New Delhi – 110058, India.</p>
+        <p>Customers are requested to provide their order number, invoice and product details when submitting a complaint.</p>
+        <p>We aim to acknowledge customer complaints within 24 hours and resolve them within the applicable legal timeframe.</p>
+        <p>For covered e-commerce transactions, statutory grievance acknowledgement and resolution requirements will be followed.</p>
+      </div>
+      <div class="terms-section">
+        <h2><span>10.</span> Policy Updates</h2>
+        <p>CSTECH SURVEY &amp; CO. reserves the right to update or modify this policy from time to time.</p>
+        <p>Any revised policy will be published on our official website with its applicable effective date. Changes will not retrospectively take away rights or remedies already available to customers under applicable law.</p>
+      </div>
+      <div class="terms-thanks"><h3>Need Help with Your Order?</h3><p>Our support team is here to assist you with returns, refunds, cancellations and warranty-related queries.</p><p><a href="mailto:info@cstechsurvey.com">Contact Our Support Team</a></p></div>
+      <div class="text-center"><a href="/index.html" class="terms-back">&larr; Back to Home</a></div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!-- SAME FOOTER AS TERMS & CONDITIONS -->
+  <footer class="tc-footer">
+    <div class="tc-footer-container">
+      <div class="tc-footer-grid">
+        <div class="tc-footer-about">
+          <a href="/index.html"><img class="tc-footer-logo" src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg" alt="CSTECH SURVEY & CO."></a>
+          <p>CSTECH Survey & Co. provides professional surveying, geospatial and GNSS equipment solutions for surveyors, engineers and infrastructure professionals.</p>
+          <div class="tc-footer-social">
+            <a href="https://www.instagram.com/cstech_survey_india/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:info@cstechsurvey.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div><h3>Quick Links</h3><ul class="tc-footer-links">
+          <li><a href="/index.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/products.html">Our Products</a></li><li><a href="/industries.html">Industries</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/contact.html">Contact Us</a></li>
+        </ul></div>
+        <div><h3>Our Products</h3><ul class="tc-footer-links">
+          <li><a href="/products.html">GNSS Receivers</a></li><li><a href="/products.html">Total Stations</a></li><li><a href="/products.html">Auto Levels</a></li><li><a href="/products.html">Survey Controllers</a></li><li><a href="/products.html">Survey Accessories</a></li><li><a href="/products.html">Survey Drones</a></li>
+        </ul></div>
+        <div class="tc-footer-contact"><h3>Contact Information</h3>
+          <p><i class="fa-solid fa-location-dot"></i> &nbsp;821, 8th Floor, Jaina Tower - 1, District Center, Janakpuri West, New Delhi - 110058</p>
+          <p><i class="fa-solid fa-phone"></i> &nbsp;<a href="tel:+919958507176">9958507176</a></p>
+          <p><i class="fa-solid fa-envelope"></i> &nbsp;<a href="mailto:info@cstechsurvey.com">info@cstechsurvey.com</a></p>
+          <p><i class="fa-solid fa-globe"></i> &nbsp;<a href="https://www.cstechsurvey.com">www.cstechsurvey.com</a></p>
+        </div>
+      </div>
+      <div class="tc-footer-bottom"><p>&copy; <span id="tcCopyrightYear"></span> CSTECH SURVEY &amp; CO. All Rights Reserved.</p>
+        <div class="tc-legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-and-conditions.html">Terms &amp; Conditions</a><a href="/shipping-policy.html" >Shipping Policy</a><a href="/cancellation-return-refund.html" class="active">Cancellation &amp; Refund</a></div>
+      </div>
+    </div>
+  </footer>
+  <button class="tc-back-top" id="tcBackTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script>
+    const tcMenuToggle = document.getElementById("tcMenuToggle");
+    const tcNavigation = document.getElementById("tcNavigation");
+    tcMenuToggle.addEventListener("click", function () {
+      const isOpen = tcNavigation.classList.toggle("open");
+      tcMenuToggle.setAttribute("aria-expanded", isOpen);
+      tcMenuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    tcNavigation.querySelectorAll("a").forEach(function(link){ link.addEventListener("click", function(){ tcNavigation.classList.remove("open"); tcMenuToggle.setAttribute("aria-expanded","false"); tcMenuToggle.innerHTML='<i class="fa-solid fa-bars"></i>'; }); });
+    document.getElementById("tcCopyrightYear").textContent = new Date().getFullYear();
+    const tcBackTop = document.getElementById("tcBackTop");
+    window.addEventListener("scroll", function(){ if(window.scrollY > 350){tcBackTop.classList.add("show");}else{tcBackTop.classList.remove("show");} });
+    tcBackTop.addEventListener("click", function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+    </script>
+</body>
+</html>
