@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CS1 Pro LiDAR Drone for aerial surveying, mapping and geospatial applications by CSTECH SURVEY & CO.">
+  <title>CS1 Pro LiDAR Drone | CSTECH SURVEY & CO.</title>
+
+  <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+  <!-- Website Theme CSS -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link href="/assets/css/themify-icons.css" rel="stylesheet">
+  <link href="/assets/css/magnific-popup.css" rel="stylesheet">
+  <link href="/assets/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="/assets/css/owl.theme.default.min.css" rel="stylesheet">
+  <link href="/assets/css/animate.css" rel="stylesheet">
+  <link href="/assets/css/validnavs.css" rel="stylesheet">
+  <link href="/assets/css/helper.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/responsive.css" rel="stylesheet">
+  <link href="/assets/css/icons.min.css" rel="stylesheet">
+
+  <style>
+    .cs1-hero-image img {
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+    }
+
+    .cs1-hero-copy {
+      padding: 20px 0;
+    }
+
+    .cs1-hero-copy h2 {
+      margin-bottom: 18px;
+    }
+
+    .cs1-stat-card,
+    .cs1-feature-card,
+    .cs1-output-card,
+    .cs1-application-card {
+      height: 100%;
+      padding: 25px;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      margin-bottom: 25px;
+    }
+
+    .cs1-stat-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .cs1-stat-card p,
+    .cs1-feature-card p,
+    .cs1-output-card p,
+    .cs1-application-card p {
+      margin-bottom: 0;
+    }
+
+    .cs1-feature-card h4,
+    .cs1-output-card h4,
+    .cs1-application-card h4 {
+      margin-bottom: 12px;
+    }
+
+    .cs1-enquiry-panel {
+      padding: 35px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .cs1-enquiry-panel .btn {
+      margin-top: 10px;
+    }
+
+    @media(max-width:767px) {
+      .cs1-hero-copy {
+        padding-top: 30px;
+      }
+
+      .cs1-enquiry-panel {
+        padding: 24px 16px;
+      }
+    }
+
+
+    /* ===== KEY FEATURES HOVER EFFECT ===== */
+
+.cs1-feature-card {
+    position: relative;
+    height: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+    transition: all 0.35s ease;
+}
+
+/* Hover */
+.cs1-feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #2154f4;
+    box-shadow: 0 15px 35px rgba(33, 84, 244, 0.12);
+}
+
+/* Heading hover color */
+.cs1-feature-card h4 {
+    transition: color 0.3s ease;
+}
+
+.cs1-feature-card:hover h4 {
+    color: #2154f4;
+}
+
+/* Paragraph */
+.cs1-feature-card p {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+/* Hover paragraph */
+.cs1-feature-card:hover p {
+    color: #444;
+}
+
+/* Mobile hover disable */
+@media (max-width: 767px) {
+    .cs1-feature-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* ==================================================
+   CS1 PRO - PREMIUM PRODUCT HERO DESIGN
+================================================== */
+
+.cs1-premium-hero {
+    position: relative;
+    padding: 100px 0 95px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.cs1-premium-hero .row {
+    display: flex;
+    align-items: center;
+}
+
+/* LEFT IMAGE BOX */
+.cs1-premium-image-box {
+    position: relative;
+    min-height: 520px;
+    padding: 24px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #f4f8ff, #eaf0f9);
+    border: 1px solid #e7edf6;
+    box-shadow: 0 20px 60px rgba(15, 35, 75, 0.07);
+    transition: all 0.4s ease;
+}
+
+.cs1-premium-image-box:hover {
+    box-shadow: 0 28px 70px rgba(15, 35, 75, 0.13);
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.cs1-premium-drone-image {
+    display: block;
+    width: 100%;
+    height: 460px;
+    object-fit: contain;
+    transition: transform 0.6s ease;
+}
+
+.cs1-premium-image-box:hover .cs1-premium-drone-image {
+    transform: scale(1.04);
+}
+
+/* TOP LABEL */
+.cs1-image-top-label {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 15px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e9edf5;
+    border-radius: 50px;
+    color: #243550;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.cs1-live-dot {
+    width: 8px;
+    height: 8px;
+    background: #2454f4;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(36, 84, 244, 0.1);
+}
+
+/* IMAGE BOTTOM INFO */
+.cs1-image-bottom-info {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    right: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 20px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(230, 235, 244, 0.9);
+}
+
+.cs1-image-bottom-info small {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    color: #2454f4;
+    font-weight: 700;
+}
+
+.cs1-image-bottom-info h5 {
+    margin: 0;
+    color: #152238;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cs1-image-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 11px;
+    background: #edf3ff;
+    color: #2454f4;
+    font-size: 18px;
+}
+
+/* RIGHT CONTENT */
+.cs1-premium-content {
+    padding-left: 45px;
+}
+
+.cs1-premium-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    color: #2454f4;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.cs1-premium-badge span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2454f4;
+}
+
+/* TITLE */
+.cs1-premium-content h1 {
+    font-size: 48px;
+    line-height: 1.13;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #111827;
+    margin: 0 0 18px;
+}
+
+.cs1-premium-content h1 span {
+    display: block;
+    color: #2454f4;
+}
+
+/* SUB HEADING */
+.cs1-premium-content h3 {
+    color: #1c293b;
+    font-size: 23px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+/* DESCRIPTION */
+.cs1-premium-description {
+    color: #687386;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+    max-width: 570px;
+}
+
+/* STATS */
+.cs1-premium-stats {
+    display: flex;
+    align-items: stretch;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 22px 0;
+    border-top: 1px solid #e9edf3;
+    border-bottom: 1px solid #e9edf3;
+}
+
+.cs1-premium-stat {
+    flex: 1;
+    padding: 0 12px;
+}
+
+.cs1-premium-stat:first-child {
+    padding-left: 0;
+}
+
+.cs1-premium-stat + .cs1-premium-stat {
+    border-left: 1px solid #e9edf3;
+}
+
+.cs1-premium-stat h4 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #152238;
+}
+
+.cs1-premium-stat h4 small {
+    font-size: 14px;
+    color: #2454f4;
+    font-weight: 700;
+}
+
+.cs1-premium-stat p {
+    margin: 0;
+    font-size: 11px;
+    color: #818b9b;
+}
+
+/* BUTTONS */
+.cs1-premium-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.cs1-premium-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 16px 23px;
+    border-radius: 6px;
+    background: #2454f4;
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(36, 84, 244, 0.15);
+    transition: all 0.3s ease;
+}
+
+.cs1-premium-btn-primary:hover {
+    background: #153dc9;
+    color: #fff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(36, 84, 244, 0.25);
+}
+
+.cs1-premium-btn-primary i {
+    transition: transform 0.3s ease;
+}
+
+.cs1-premium-btn-primary:hover i {
+    transform: translateX(5px);
+}
+
+.cs1-premium-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 21px;
+    border: 1px solid #dfe5ef;
+    border-radius: 6px;
+    color: #243047 !important;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.cs1-premium-btn-secondary:hover {
+    border-color: #2454f4;
+    color: #2454f4 !important;
+    background: #f7f9ff;
+}
+
+/* NOTE */
+.cs1-premium-note {
+    margin-top: 17px;
+    font-size: 10px;
+    color: #a0a8b5;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 991px) {
+
+    .cs1-premium-hero {
+        padding: 65px 0;
+    }
+
+    .cs1-premium-image-box {
+        min-height: 430px;
+    }
+
+    .cs1-premium-drone-image {
+        height: 380px;
+    }
+
+    .cs1-premium-content {
+        padding: 40px 0 0;
+    }
+
+    .cs1-premium-content h1 {
+        font-size: 40px;
+    }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 576px) {
+
+    .cs1-premium-hero {
+        padding: 40px 0 55px;
+    }
+
+    .cs1-premium-image-box {
+        min-height: 330px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .cs1-premium-drone-image {
+        height: 300px;
+    }
+
+    .cs1-image-top-label {
+        top: 15px;
+        left: 15px;
+        font-size: 8px;
+        padding: 9px 12px;
+    }
+
+    .cs1-image-bottom-info {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 14px;
+    }
+
+    .cs1-image-bottom-info h5 {
+        font-size: 12px;
+    }
+
+    .cs1-image-bottom-info small {
+        font-size: 8px;
+    }
+
+    .cs1-image-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .cs1-premium-content {
+        padding-top: 30px;
+    }
+
+    .cs1-premium-content h1 {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    .cs1-premium-content h3 {
+        font-size: 19px;
+    }
+
+    .cs1-premium-description {
+        font-size: 13px;
+    }
+
+    .cs1-premium-stats {
+        margin-top: 22px;
+        margin-bottom: 22px;
+        padding: 17px 0;
+    }
+
+    .cs1-premium-stat {
+        padding: 0 8px;
+    }
+
+    .cs1-premium-stat h4 {
+        font-size: 21px;
+    }
+
+    .cs1-premium-stat p {
+        font-size: 9px;
+    }
+
+    .cs1-premium-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cs1-premium-btn-primary,
+    .cs1-premium-btn-secondary {
+        width: 100%;
+    }
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header id="home" style="background:#fff !important;">
+
+  <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background"
+       style="background:#fff !important;">
+
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="navbar-header">
+
+        <button type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target="#navbar-menu"
+                aria-label="Toggle navigation menu">
+
+          <img src="/assets/icons/menu.png" alt="Menu">
+
+        </button>
+
+        <a class="navbar-brand" href="/index.html">
+          <img src="/assets/img/logo.png"
+               class="logo"
+               alt="CSTECH SURVEY & CO. logo">
+        </a>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-menu">
+
+        <div class="collapse-header">
+
+          <img src="/assets/img/logo.png" alt="CSTECH logo">
+
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target="#navbar-menu"
+                  aria-label="Close menu">
+            X
+          </button>
+
+        </div>
+
+        <ul class="nav navbar-nav navbar-center"
+            data-in="fadeInDown"
+            data-out="fadeOutUp">
+
+          <li class="dropdown">
+            <a href="/">Home</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="/about.html">About</a>
+          </li>
+
+          <li class="dropdown">
+
+            <a href="/products.html"
+               class="dropdown-toggle"
+               data-toggle="dropdown">
+              Products
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
+              <li><a href="/products.html?total_station">Total Station</a></li>
+              <li><a href="/products.html?Drone">Drone</a></li>
+              <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
+              <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+              <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+              <li><a href="/products.html?optics">Optics</a></li>
+              <li><a href="/products.html?datalink">Datalink</a></li>
+              <li><a href="/products.html?accessories">Accessories</a></li>
+
+            </ul>
+
+          </li>
+
+          <li class="dropdown">
+
+            <a href="/industries.html"
+               class="dropdown-toggle"
+               data-toggle="dropdown">
+              Industries
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li><a href="/industries.html#surveying-engineering">Surveying &amp; Engineering</a></li>
+              <li><a href="/industries.html#geographic-information-system">Geographic Information System</a></li>
+              <li><a href="/industries.html#3d-scanning-mapping">3D Scanning Mapping</a></li>
+              <li><a href="/industries.html#monitoring">Monitoring</a></li>
+
+            </ul>
+
+          </li>
+
+          <li class="dropdown">
+            <a href="/contact.html">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="overlay-screen"></div>
+
+  </nav>
+
+</header>
+
+
+<!-- ================= BANNER ================= -->
+
+<section class="section-breadcrumb-wrap-block section-block-demo1-breadcrumb3"
+         data-screen="screen-large">
+
+  <div class="page-title-bar">
+
+    <img class="page-banner"
+         src="/assets/img/product_banner.jpg"
+         alt="Products banner"
+         itemprop="image">
+
+    <div class="content-box"></div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main>
+
+<!-- ================= CS1 PRO PREMIUM HERO ================= -->
+
+<section class="cs1-premium-hero">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT: PRODUCT IMAGE -->
+            <div class="col-lg-6">
+                <div class="cs1-premium-image-box">
+
+                    <div class="cs1-image-top-label">
+                        <span class="cs1-live-dot"></span>
+                        PROFESSIONAL SURVEYING UAV
+                    </div>
+
+                    <img
+                        src="/assets/img/products/drone/drone.png"
+                        alt="CS1 Pro LiDAR Survey Drone"
+                        class="cs1-premium-drone-image"
+                    >
+
+                    <div class="cs1-image-bottom-info">
+                        <div>
+                            <small>BUILT FOR PROFESSIONALS</small>
+                            <h5>Next-Generation Aerial Surveying</h5>
+                        </div>
+                        <div class="cs1-image-icon">
+                            <i class="fas fa-drone"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: PRODUCT DETAILS -->
+            <div class="col-lg-6">
+                <div class="cs1-premium-content">
+
+                    <div class="cs1-premium-badge">
+                        <span></span> ADVANCED GEOSPATIAL TECHNOLOGY
+                    </div>
+
+                    <h1>
+                        CS1 Pro
+                        <span>LiDAR Drone</span>
+                    </h1>
+
+                    <h3>
+                        Elevate your survey.
+                        <br>
+                        Capture every detail.
+                    </h3>
+
+                    <p class="cs1-premium-description">
+                        A powerful aerial surveying platform designed for
+                        professional LiDAR acquisition, high-precision mapping,
+                        terrain analysis and advanced geospatial workflows.
+                    </p>
+
+                    <p class="cs1-premium-description">
+                        Engineered for efficient field deployment with
+                        autonomous flight capabilities, intelligent safety
+                        systems and reliable performance in demanding
+                        survey environments.
+                    </p>
+
+                    <!-- SPECIFICATION HIGHLIGHTS -->
+                    <div class="cs1-premium-stats">
+
+                        <div class="cs1-premium-stat">
+                            <h4>40–45 <small>min</small></h4>
+                            <p>Flight Time*</p>
+                        </div>
+
+                        <div class="cs1-premium-stat">
+                            <h4>6 <small>kg</small></h4>
+                            <p>Maximum Payload</p>
+                        </div>
+
+                        <div class="cs1-premium-stat">
+                            <h4>2.5 <small>km</small></h4>
+                            <p>Radial Range*</p>
+                        </div>
+
+                    </div>
+
+                   
+
+                    <div class="cs1-premium-note">
+                        *Performance values depend on operating conditions.
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= PRODUCT OVERVIEW ================= -->
+
+<section class="default-padding bg-gray">
+
+  <div class="container">
+
+    <div class="site-heading text-center">
+      <h2>Product Overview</h2>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <p>
+          The CS1 Pro LiDAR Drone is designed to support professional
+          surveying and mapping operations. Its multi-rotor platform
+          combines aerial data collection capability, autonomous flight
+          operation and integrated safety features for efficient fieldwork.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="row mt-4">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-stat-card">
+          <h3>40–45 Minutes</h3>
+          <p>Flight time with 1 kg payload (specified condition)</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-stat-card">
+          <h3>6 kg</h3>
+          <p>Maximum payload capacity</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-stat-card">
+          <h3>2.5 KM</h3>
+          <p>Radial range (manufacturer specification)</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= KEY FEATURES ================= -->
+
+<section class="default-padding">
+
+  <div class="container">
+
+    <div class="site-heading text-center">
+      <h2>Key Features</h2>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-feature-card">
+          <h4>Autonomous Operation</h4>
+          <p>Supports automated operation for efficient surveying and mapping missions.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-feature-card">
+          <h4>Quick Deployment</h4>
+          <p>Designed to be field-ready in approximately five minutes.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-feature-card">
+          <h4>LiDAR Surveying</h4>
+          <p>Suitable for aerial LiDAR data acquisition and geospatial workflows.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-feature-card">
+          <h4>Multi-Rotor Platform</h4>
+          <p>Aerial platform designed for professional field surveying requirements.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-feature-card">
+          <h4>3-Axis Gimbal</h4>
+          <p>Supports stable camera and monitoring operation.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="cs1-feature-card">
+          <h4>Advanced Safety</h4>
+          <p>Integrated safety and return-to-home features support safer flight operations.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- ================= APPLICATIONS ================= -->
+
+<section class="default-padding cs1-applications-section">
+
+  <div class="container">
+
+    <div class="site-heading text-center">
+      <h2>Applications</h2>
+      <p>Designed for diverse aerial surveying and geospatial industries.</p>
+    </div>
+
+    <div class="row cs1-applications-grid">
+
+      <!-- Archaeology -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="cs1-application-card">
+          <div class="cs1-application-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0047/0247/0190/files/drones-for-archeology.jpg?v=1691746059"
+              alt="Aerial archaeological excavation and site mapping"
+              loading="lazy">
+          </div>
+          <div class="cs1-application-content">
+            <h4>Archaeology</h4>
+            <p>Site documentation, excavation mapping and terrain analysis.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mining -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="cs1-application-card">
+          <div class="cs1-application-image">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5f7e703d8647ca77f086d0a9/1628146405112-E4N10Z9ESKU7PVNVH7FB/mining.jpg?format=1500w"
+              alt="Aerial open pit mining survey"
+              loading="lazy">
+          </div>
+          <div class="cs1-application-content">
+            <h4>Mining</h4>
+            <p>Mine surveying, volumetric analysis and surface mapping.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Environment -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="cs1-application-card">
+          <div class="cs1-application-image">
+            <img
+              src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=85"
+              alt="Aerial environmental landscape survey"
+              loading="lazy">
+          </div>
+          <div class="cs1-application-content">
+            <h4>Environment</h4>
+            <p>Environmental monitoring, land analysis and mapping.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forestry -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="cs1-application-card">
+          <div class="cs1-application-image">
+            <img
+              src="https://images.unsplash.com/photo-1591081658728-1c28a5afaedc?auto=format&fit=crop&w=1200&q=85"
+              alt="Aerial forest and vegetation mapping"
+              loading="lazy">
+          </div>
+          <div class="cs1-application-content">
+            <h4>Forestry</h4>
+            <p>Forest mapping, vegetation analysis and canopy monitoring.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Utilities -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="cs1-application-card">
+          <div class="cs1-application-image">
+            <img
+              src="https://api-raport.pse.pl/uploads/2024/ZDJECIA-W-TRESC/PSE-1110.jpg"
+              alt="Utility and electrical infrastructure aerial inspection"
+              loading="lazy">
+          </div>
+          <div class="cs1-application-content">
+            <h4>Utilities</h4>
+            <p>Infrastructure inspection and utility corridor mapping.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Civil Engineering -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="cs1-application-card">
+          <div class="cs1-application-image">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/56dce2e3a3360c8bedcf6829/596b4743-f314-4e00-8cd6-9087e9e0be30/embodiedcarbon.jpg"
+              alt="Aerial civil engineering and construction site"
+              loading="lazy">
+          </div>
+          <div class="cs1-application-content">
+            <h4>Civil Engineering</h4>
+            <p>Construction site surveying, planning and progress monitoring.</p>
+          </div>
+        </div>
+      </div>
+       
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- ================= TECHNICAL SPECIFICATIONS ================= -->
+
+<section class="default-padding bg-gray">
+
+  <div class="container">
+
+    <div class="site-heading text-center">
+      <h2>Technical Specifications</h2>
+    </div>
+
+    <div class="table-responsive">
+
+      <table class="table table-bordered">
+
+        <tbody>
+
+          <tr>
+            <th>Product</th>
+            <td>CS1 Pro LiDAR Drone</td>
+          </tr>
+
+          <tr>
+            <th>Platform</th>
+            <td>Multi-Rotor</td>
+          </tr>
+
+          <tr>
+            <th>Category</th>
+            <td>Small Category</td>
+          </tr>
+
+          <tr>
+            <th>Radial Range</th>
+            <td>2.5 KM</td>
+          </tr>
+
+          <tr>
+            <th>Maximum Altitude</th>
+            <td>120 m</td>
+          </tr>
+
+          <tr>
+            <th>Flight Time</th>
+            <td>40–45 minutes with 1 kg payload</td>
+          </tr>
+
+          <tr>
+            <th>Maximum Payload</th>
+            <td>6 kg</td>
+          </tr>
+
+          <tr>
+            <th>Deployment Time</th>
+            <td>Approximately 5 minutes</td>
+          </tr>
+
+          <tr>
+            <th>Operation</th>
+            <td>Autonomous operation supported</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-light"
+        style="margin-top:100px; margin-bottom:-120px;">
+
+  <div class="fixed-shape">
+    <img src="/assets/img/footermap.svg" alt="Footer map shape">
+  </div>
+
+  <div class="container">
+
+    <div class="f-items default-padding">
+
+      <div class="row">
+
+        <!-- Company Information -->
+
+        <div class="col-lg-4 col-md-6 item">
+
+          <div class="f-item about">
+
+            <h3>CSTECH SURVEY &amp; CO.</h3>
+
+            <p>
+              Established to offer wide range of consulting services
+              with necessary tools &amp; expertise to scale your business.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Company Links -->
+
+        <div class="col-lg-2 col-md-6 item">
+
+          <div class="f-item link">
+
+            <h4 class="widget-title">Company</h4>
+
+            <ul>
+
+              <li><a href="/">Home</a></li>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/products.html">Products</a></li>
+              <li><a href="/industries.html">Industries</a></li>
+              <li><a href="/contact.html">Contact Us</a></li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+        <!-- Product Links -->
+
+        <div class="col-lg-2 col-md-6 item">
+
+          <div class="f-item link">
+
+            <h4 class="widget-title">Products</h4>
+
+            <ul>
+
+              <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
+              <li><a href="/products.html?total_station">Total Station</a></li>
+              <li><a href="/products.html?Drone">Drone</a></li>
+              <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
+              <li><a href="/products.html?optics">Optics</a></li>
+              <li><a href="/products.html?accessories">Accessories</a></li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+        <!-- Contact Information -->
+
+        <div class="col-lg-4 col-md-6 item">
+
+          <div class="f-item contact">
+
+            <h4 class="widget-title">Contact Info</h4>
+
+            <ul>
+
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                Unit No. 821, 8th Floor, Jaina Tower 1,
+                Janakpuri District Centre, New Delhi - 110058
+              </li>
+
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@cstechsurvey.com">
+                  info@cstechsurvey.com
+                </a>
+              </li>
+
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919958507176">
+                  +91 9958507176
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.instagram.com/cstech_survey_india/"
+                   target="_blank"
+                   rel="noopener">
+                  Instagram
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- Agar original theme ke additional scripts use hote hain,
+     toh unhe yahan add karna. -->
+
+</body>
+</html>
