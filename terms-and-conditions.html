@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/validnavs.css">
+    <link rel="stylesheet" href="/assets/css/helper.css">
+    <link rel="stylesheet" href="/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/icons.min.css">
 
     <!-- Icons -->
     <link rel="stylesheet"
@@ -51,84 +59,7 @@
             text-decoration: none;
         }
 
-        /* =========================================
-           HEADER
-        ========================================= */
-
-        .tc-header {
-            width: 100%;
-            background: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            box-shadow: 0 2px 12px rgba(7, 16, 68, 0.07);
-        }
-
-        .tc-header-inner {
-            max-width: 1320px;
-            min-height: 88px;
-            padding: 12px 24px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .tc-brand {
-            display: flex;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .tc-brand img {
-            max-width: 210px;
-            max-height: 65px;
-            object-fit: contain;
-        }
-
-        .tc-nav {
-            display: flex;
-            align-items: center;
-            gap: 27px;
-        }
-
-        .tc-nav a {
-            color: var(--tc-navy);
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.25s;
-        }
-
-        .tc-nav a:hover,
-        .tc-nav a.active {
-            color: var(--tc-red);
-        }
-
-        .tc-nav .tc-contact-btn {
-            padding: 12px 21px;
-            background: var(--tc-red);
-            color: #fff;
-            border-radius: 4px;
-            transition: 0.25s;
-        }
-
-        .tc-nav .tc-contact-btn:hover {
-            background: var(--tc-navy);
-            color: #fff;
-        }
-
-        .tc-menu-toggle {
-            display: none;
-            width: 43px;
-            height: 43px;
-            border: 1px solid var(--tc-border);
-            background: white;
-            border-radius: 5px;
-            font-size: 20px;
-            color: var(--tc-navy);
-            cursor: pointer;
-        }
+        /* Header styles are provided by the same site CSS as index.html. */
 
         /* =========================================
            PAGE BANNER
@@ -558,22 +489,6 @@
         ========================================= */
 
         @media (max-width: 1000px){
-            .tc-header-inner {
-                min-height: 75px;
-            }
-
-            .tc-brand img {
-                max-width: 175px;
-            }
-
-            .tc-nav {
-                gap: 16px;
-            }
-
-            .tc-nav a {
-                font-size: 13px;
-            }
-
             .tc-footer-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 35px;
@@ -589,53 +504,6 @@
         ========================================= */
 
         @media (max-width: 767px) {
-            .tc-header-inner {
-                min-height: 72px;
-                padding: 10px 16px;
-            }
-
-            .tc-brand img {
-                max-width: 165px;
-                max-height: 55px;
-            }
-
-            .tc-menu-toggle {
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .tc-nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #ffffff;
-                padding: 12px 20px 22px;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                box-shadow: 0 12px 20px rgba(7,16,68,0.12);
-            }
-
-            .tc-nav.open {
-                display: flex;
-            }
-
-            .tc-nav a {
-                display: block;
-                padding: 13px 5px;
-                border-bottom: 1px solid #f0f1f5;
-                font-size: 14px;
-            }
-
-            .tc-nav .tc-contact-btn {
-                text-align: center;
-                margin-top: 12px;
-                border-bottom: none;
-            }
-
             .tc-banner {
                 padding: 55px 15px;
             }
@@ -723,38 +591,56 @@
 
 <body>
 
-<!-- =========================================
-     HEADER / NAVIGATION
-========================================= -->
-
-<header class="tc-header">
-    <div class="tc-header-inner">
-
-        <a href="/index.html" class="tc-brand">
-            <img
-                src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg"
-                alt="CSTECH Survey & Co Logo">
-        </a>
-
-        <button class="tc-menu-toggle"
-                id="tcMenuToggle"
-                aria-label="Toggle Navigation"
-                aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <nav class="tc-nav" id="tcNavigation">
-            <a href="/index.html">Home</a>
-            <a href="/about.html">About Us</a>
-            <a href="/products.html">Products</a>
-            <a href="/industries.html">Industries</a>
-            <a href="/resources.html">Resources</a>
-            <a href="/careers.html">Careers</a>
-            <a href="/contact.html" class="tc-contact-btn">Contact Us</a>
+    <!-- Header -->
+    <header id="home" style="background: #fff !important;">
+        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background" style="background: #fff !important;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <img src="assets/icons/menu.png">
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="collapse-header">
+                        <img src="assets/img/logo.png" alt="Logo">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">X</button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="dropdown"><a href="/">Home</a></li>
+                        <li class="dropdown"><a href="/about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="/products.html" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?drone">Drone</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <li><a href="/products.html?accessories">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/industries.html" class="dropdown-toggle" data-toggle="dropdown">Industries</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/industries.html#surveying-engineering">Surveying &amp; Engineering</a></li>
+                                <li><a href="/industries.html#geographic-information-system">Geographic Information System</a></li>
+                                <li><a href="/industries.html#3d-scanning-mapping">3D Scanning Mapping</a></li>
+                                <li><a href="/industries.html#monitoring">Monitoring</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="overlay-screen"></div>
         </nav>
-
-    </div>
-</header>
+    </header>
 
 <!-- =========================================
      PAGE BANNER
@@ -768,8 +654,8 @@
         <h1>Terms &amp; Conditions</h1>
 
         <p>
-            Please read our terms carefully before using our website
-            or purchasing our products and services.
+            Please Read Our Terms Carefully Before using Our Website
+            Or Purchasing Our Products And Services.
         </p>
 
         <div class="tc-breadcrumb">
@@ -1205,119 +1091,69 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer class="tc-footer">
-    <div class="tc-footer-container">
-
-        <div class="tc-footer-grid">
-
-            <!-- COMPANY -->
-            <div class="tc-footer-about">
-
-                <a href="/index.html">
-                    <img
-                        class="tc-footer-logo"
-                        src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg"
-                        alt="CSTECH SURVEY & CO.">
-                </a>
-
-                <p>
-                    CSTECH Survey &amp; Co. provides professional surveying,
-                    geospatial and GNSS equipment solutions for surveyors,
-                    engineers and infrastructure professionals.
-                </p>
-
-                <div class="tc-footer-social">
-                    <a href="https://www.instagram.com/cstech_survey_india/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="mailto:info@cstechsurvey.com"
-                       aria-label="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- QUICK LINKS -->
-            <div>
-                <h3>Quick Links</h3>
-
-                <ul class="tc-footer-links">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/products.html">Our Products</a></li>
-                    <li><a href="/industries.html">Industries</a></li>
-                    <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- PRODUCTS -->
-            <div>
-                <h3>Our Products</h3>
-
-                <ul class="tc-footer-links">
-                    <li><a href="/products.html">GNSS Receivers</a></li>
-                    <li><a href="/products.html">Total Stations</a></li>
-                    <li><a href="/products.html">Auto Levels</a></li>
-                    <li><a href="/products.html">Survey Controllers</a></li>
-                    <li><a href="/products.html">Survey Accessories</a></li>
-                    <li><a href="/products.html">Survey Drones</a></li>
-                </ul>
-            </div>
-
-            <!-- CONTACT -->
-            <div class="tc-footer-contact">
-                <h3>Contact Information</h3>
-
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    &nbsp;821, 8th Floor, Jaina Tower - 1,
-                    District Center, Janakpuri West,
-                    New Delhi - 110058
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    &nbsp;<a href="tel:+919958507176">9958507176</a>
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    &nbsp;<a href="mailto:info@cstechsurvey.com">
-                        info@cstechsurvey.com
-                    </a>
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-globe"></i>
-                    &nbsp;<a href="https://www.cstechsurvey.com">
-                        www.cstechsurvey.com
-                    </a>
-                </p>
-            </div>
-
+    <!-- Footer -->
+    <footer class="bg-dark text-light" style="margin-top: 0; margin-bottom: -120px;">
+        <div class="fixed-shape">
+            <img src="assets/img/footermap.svg" alt="Shape">
         </div>
-
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 item">
+                        <div class="f-item about">
+                            <h3>CSTECH SURVEY &amp; CO.</h3>
+                            <p>Established to offer wide range of consulting services with necessary tools &amp; expertise to scale your business</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Company</h4>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="industries.html">Industries</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Products</h4>
+                            <ul>
+                                <li><a href="/products.html?gnss_receiver">GNSS</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?drone">Drone</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <li><a href="/products.html?accessories">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 item">
+                        <div class="f-item">
+                            <h4 class="widget-title">Contact Info</h4>
+                            <div class="address">
+                                <ul>
+                                    <li><strong>Address:</strong> Unit no - 821, 8th Floor Jaina Tower 1, Janakpuri, District Center, New Delhi - 110058</li>
+                                    <li><strong>Email:</strong> <a href="mailto:sales@cstechsurvey.com">sales@cstechsurvey.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="download">
+                                <h5>Social</h5>
+                                <a href="javascript:void(0)"><i class="fab fa-whatsapp"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-facebook"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -1331,81 +1167,35 @@
 
 
         
-        <!-- FOOTER BOTTOM -->
-        <div class="tc-footer-bottom">
+       <!-- Start Footer Bottom -->
+      <div class="footer-bottom">
+     <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
 
-            <p>
-                &copy; <span id="tcCopyrightYear"></span>
-                CSTECH SURVEY &amp; CO. All Rights Reserved.
-            </p>
+               <div class="footer-bottom">
+    <p>
+        Copyright © 2026. Designed by
+        <a href="index.html">CSTech Survey & Co.</a>
+    </p>
 
-            <div class="tc-legal-links">
-                <a href="/privacy-policy.html">Privacy Policy</a>
-                <a href="/terms-and-conditions.html" class="active">Terms &amp; Conditions</a>
-                <a href="/shipping-policy.html">Shipping Policy</a>
-                <a href="/cancellation-return-refund.html">Cancellation &amp; Refund</a>
-            </div>
+    <div class="footer-policy-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="shipping-policy.html">Shipping Policy</a>
+        <a href="cancellation-return-refund.html">
+            Cancellation, Return & Refund
+        </a>
+    </div>
+</div>
+
+
 
         </div>
-
     </div>
-</footer>
-
-<!-- BACK TO TOP -->
-<button class="tc-back-top" id="tcBackTop" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
-
-<script>
-    // Mobile navigation toggle
-    const tcMenuToggle = document.getElementById("tcMenuToggle");
-    const tcNavigation = document.getElementById("tcNavigation");
-
-    tcMenuToggle.addEventListener("click", function () {
-        const isOpen = tcNavigation.classList.toggle("open");
-
-        tcMenuToggle.setAttribute("aria-expanded", isOpen);
-
-        tcMenuToggle.innerHTML = isOpen
-            ? '<i class="fa-solid fa-xmark"></i>'
-            : '<i class="fa-solid fa-bars"></i>';
-    });
-
-    // Close menu when navigation link clicked
-    tcNavigation.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            tcNavigation.classList.remove("open");
-            tcMenuToggle.setAttribute("aria-expanded", "false");
-            tcMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        });
-    });
-
-    // Dynamic copyright year
-    document.getElementById("tcCopyrightYear").textContent =
-        new Date().getFullYear();
-
-    // Back to top
-    const tcBackTop = document.getElementById("tcBackTop");
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 350) {
-            tcBackTop.classList.add("show");
-        } else {
-            tcBackTop.classList.remove("show");
-        }
-    });
-
-    tcBackTop.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-</script>
+</div>
+<!-- End Footer Bottom -->
+    </footer>
 
 </body>
 </html>
