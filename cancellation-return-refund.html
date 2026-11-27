@@ -145,40 +145,415 @@
     @media(max-width:767px){ .tc-header-inner{min-height:72px;padding:10px 16px}.tc-brand img{max-width:165px;max-height:55px}.tc-menu-toggle{display:inline-flex;justify-content:center;align-items:center}.tc-nav{display:none;position:absolute;top:100%;left:0;width:100%;background:#fff;padding:12px 20px 22px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 12px 20px rgba(7,16,68,.12)}.tc-nav.open{display:flex}.tc-nav a{display:block;padding:13px 5px;border-bottom:1px solid #f0f1f5;font-size:14px}.tc-nav .tc-contact-btn{text-align:center;margin-top:12px;border-bottom:0}.tc-footer{padding:45px 18px 0}.tc-footer-grid{grid-template-columns:1fr;gap:28px}.tc-footer-bottom{flex-direction:column;align-items:flex-start}.tc-legal-links{gap:13px}.tc-back-top{bottom:15px;right:15px}}
     @media(max-width:380px){.tc-brand img{max-width:145px}}
 
+
+  /* FINAL PAGE-SPECIFIC FIXES: prevent global website CSS from breaking this policy page */
+  body { overflow-x: hidden; }
+  body .terms-hero { width: 100%; position: relative; z-index: 1; clear: both; }
+  body .terms-hero h1 { max-width: 1100px; margin: 0 auto 15px; line-height: 1.25; }
+  body .terms-hero p { max-width: 1000px; margin: 0 auto; line-height: 1.6; }
+  body .terms-wrapper { display: block; width: 100%; padding: 68px 20px 90px; }
+  body .terms-container { display: block; width: 100%; max-width: 970px; margin: 0 auto; }
+  /* body .terms-intro { display: block; width: 100%; text-align: left; padding: 28px 32px; margin: 0 0 42px; border-left: 4px solid var(--tc-red); background: #f5f7fb; border-radius: 8px; } */
+  body .terms-intro h2 { text-align: center; line-height: 1.4; margin: 0 0 12px; font-size: 24px; }
+  body .terms-intro .terms-date { text-align: center; margin: 0 0 24px; line-height: 1.6; }
+  /* body .terms-intro p:not(.terms-date) { text-align: left; font-size: 15px; line-height: 1.85; margin: 0 0 16px; } */
+  body .terms-intro p:last-child { margin-bottom: 0; }
+  body .terms-section { display: block; width: 100%; padding: 0 0 30px; margin: 0 0 30px; border-bottom: 1px solid #e8ebf2; }
+  body .terms-section h2 { font-size: 23px; line-height: 1.45; margin: 0 0 18px; text-align: left; }
+  body .terms-section h3 { color: var(--tc-navy); font-size: 18px; font-weight: 700; margin: 22px 0 12px; }
+  body .terms-section p { font-size: 15px; line-height: 1.85; margin: 0 0 14px; text-align: left; }
+  body .terms-section ul { padding-left: 22px; margin: 12px 0 18px; }
+  body .terms-section ul li { font-size: 15px; line-height: 1.85; margin: 0 0 8px; }
+  body .terms-contact { padding: 25px 28px; border: 1px solid #e6e8ef; border-radius: 10px; background: #f7f8fb; }
+  body .terms-contact h2 { margin-bottom: 18px; }
+  body .terms-contact p { margin-bottom: 10px; }
+  body .terms-thanks { width: 100%; text-align: center; margin: 40px 0 0; padding: 35px 25px; border-radius: 10px; }
+  body .terms-thanks h3 { color: #fff; font-size: 22px; margin: 0 0 12px; }
+  body .terms-thanks p { text-align: center; color: #d5def6; }
+  body .terms-thanks a { color: #fff; text-decoration: underline; }
+  body .terms-back { display: inline-block; margin: 30px 0 0; }
+  body .tc-footer { width: 100%; position: relative; clear: both; }
+  body .tc-footer-container { width: 100%; max-width: 1320px; margin: 0 auto; }
+  body .tc-footer-grid { width: 100%; }
+  @media (max-width: 767px) {
+    body .terms-hero { padding: 48px 16px; }
+    body .terms-hero h1 { font-size: clamp(26px, 7vw, 34px); }
+    body .terms-wrapper { padding: 40px 15px 55px; }
+    /* body .terms-intro { padding: 22px 18px; margin-bottom: 28px; } */
+    body .terms-intro h2 { font-size: 21px; }
+    body .terms-intro p:not(.terms-date) { font-size: 14px; }
+    body .terms-section h2 { font-size: 20px; }
+    body .terms-section p, body .terms-section ul li { font-size: 14px; line-height: 1.8; }
+    body .terms-contact { padding: 20px; }
+  }
+
+
+
+  /* Cancellation Policy Title Card */
+.policy-title-card {
+    background: #f5f7fb !important;
+    border-left: 4px solid var(--tc-red) !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    max-width: 970px !important;
+    margin: 0 auto 42px !important;
+    padding: 35px 32px !important;
+    text-align: center !important;
+}
+
+/* Website Legal Policy Badge */
+.policy-title-card .policy-label {
+    display: inline-block;
+    background: #fff0f3;
+    color: #d71935;
+    border-radius: 30px;
+    padding: 9px 18px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Policy Heading */
+.policy-title-card h2 {
+    color: #071044 !important;
+    text-align: center !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+    margin: 0 0 12px !important;
+}
+
+/* Company & Effective Date */
+.policy-title-card .policy-company {
+    color: #6f778a !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    margin: 0 0 18px !important;
+}
+
+.policy-title-card .policy-effective {
+    display: inline-block;
+    background: #eef1f7;
+    color: #4a5368 !important;
+    border-radius: 5px;
+    padding: 12px 18px;
+    margin: 0 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+/* Introduction spacing */
+.policy-introduction {
+    margin-bottom: 30px !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    .policy-title-card {
+        padding: 24px 18px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .policy-title-card h2 {
+        font-size: 20px !important;
+        line-height: 1.5 !important;
+    }
+
+    .policy-title-card .policy-label {
+        font-size: 11px;
+        padding: 8px 14px;
+    }
+
+    .policy-title-card .policy-effective {
+        font-size: 13px !important;
+    }
+}
+
+/* Cancellation page hero */
+.hero-section {
+    padding: 75px 20px 80px;
+    min-height: 235px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    margin: 0 0 18px;
+    line-height: 1.3;
+}
+
+/* Policy intro card */
+.policy-intro {
+    padding: 40px;
+    border-left: 3px solid #e31837;
+    border-radius: 10px;
+    background: #f5f7fb;
+    margin: 0 auto 60px;
+}
+
+/* Policy badge */
+.policy-label {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: #fff0f2;
+    color: #e31837;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Policy heading */
+.policy-intro h2 {
+    text-align: center;
+    margin: 0 0 18px;
+    line-height: 1.4;
+    color: #101d46;
+}
+
+
+
+/* Effective date */
+.policy-date {
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 14px 20px;
+    background: #eef1f7;
+    border-radius: 8px;
+    color: #e31837;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Policy Intro Card */
+.policy-intro-card {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 40px 48px;
+    background: #f5f7fb;
+    border-left: 3px solid #e31837;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Website Legal Policy Badge */
+.policy-label {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 12px 24px;
+    background: #fff0f3;
+    color: #e31837;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Main Policy Heading */
+.policy-intro-card h1 {
+    text-align: center;
+    color: #101d45;
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 0 0 14px;
+}
+
+
+
+/* Effective Date */
+.policy-date {
+    width: fit-content;
+    margin: 18px auto 32px;
+    padding: 12px 20px;
+    background: #eef1f7;
+    border-radius: 8px;
+    color: #e31837;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Introduction Text */
+.policy-intro-card p {
+    text-align: left;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .policy-intro-card {
+        margin: 30px 16px;
+        padding: 28px 22px;
+    }
+
+    .policy-intro-card h1 {
+        font-size: 21px;
+    }
+
+    .policy-date {
+        margin: 16px auto 24px;
+    }
+}
+ /* Cancellation Policy - Company & Effective Date */
+.policy-company-info {
+    text-align: center;
+    margin: 18px 0 30px;
+}
+
+.policy-company-name {
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 12px;
+}
+
+.policy-effective-date {
+    text-align: center;
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* ===== CANCELLATION POLICY INTRO ALIGNMENT FIX ===== */
+
+/* Intro card heading */
+body .terms-intro h2 {
+    text-align: center !important;
+    margin-bottom: 12px !important;
+}
+
+/* Company name + effective date */
+body .terms-intro .terms-date {
+    text-align: center !important;
+    color: #737b8e !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    margin: 0 0 28px !important;
+    line-height: 1.6 !important;
+}
+
+/* Intro paragraphs */
+body .terms-intro p:not(.terms-date) {
+    text-align: left !important;
+    color: #60697b !important;
+    font-size: 15px !important;
+    line-height: 1.85 !important;
+    margin-bottom: 16px !important;
+}
+
+/* Keep the last paragraph spacing clean */
+body .terms-intro p:last-child {
+    margin-bottom: 0 !important;
+}
+
+
+
+
+/* FIX: Center company name properly inside legal policy card */
+body .terms-intro {
+    text-align: center !important;
+}
+
+body .terms-intro p.policy-company {
+    display: block !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    text-align: center !important;
+    margin: 12px 0 18px !important;
+    color: #6f778a !important;
+}
   </style>
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/validnavs.css" rel="stylesheet" />
+    <link href="assets/css/helper.css" rel="stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- SAME HEADER/NAV AS TERMS & CONDITIONS -->
-  <header class="tc-header">
-    <div class="tc-header-inner">
-      <a href="/index.html" class="tc-brand"><img src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg" alt="CSTECH Survey & Co Logo"></a>
-      <button class="tc-menu-toggle" id="tcMenuToggle" aria-label="Toggle Navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-      <nav class="tc-nav" id="tcNavigation">
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About Us</a>
-        <a href="/products.html">Products</a>
-        <a href="/industries.html">Industries</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/careers.html">Careers</a>
-        <a href="/contact.html" class="tc-contact-btn">Contact Us</a>
-      </nav>
-    </div>
-  </header>
+  <header id="home" style="background: #fff !important;">
+        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background" style="background: #fff !important;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <img src="assets/icons/menu.png">
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="collapse-header">
+                        <img src="assets/img/logo.png" alt="Logo">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">X</button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="dropdown"><a href="/">Home</a></li>
+                        <li class="dropdown"><a href="/about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="/products.html" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/products.html?gnss_receiver">GNSS Receiver</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?drone">Drone</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <li><a href="/products.html?accessories">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/industries.html" class="dropdown-toggle" data-toggle="dropdown">Industries</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/industries.html#surveying-engineering">Surveying &amp; Engineering</a></li>
+                                <li><a href="/industries.html#geographic-information-system">Geographic Information System</a></li>
+                                <li><a href="/industries.html#3d-scanning-mapping">3D Scanning Mapping</a></li>
+                                <li><a href="/industries.html#monitoring">Monitoring</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="overlay-screen"></div>
+        </nav>
+    </header>
 
   <section class="terms-hero">
     <h1>Cancellation, Return, Refund &amp; Warranty Policy</h1>
-    <p>Transparent terms for cancellations, returns, refunds, replacements and warranty support</p>
+    <p>Transparent Terms for Cancellations, Returns, Refunds, Replacements and Warranty Support</p>
   </section>
 
   <section class="terms-wrapper">
     <div class="terms-container">
       <div class="terms-intro">
-        <h2>CANCELLATION, RETURN, REFUND &amp; WARRANTY POLICY</h2>
-        <p class="terms-date">CSTECH SURVEY &amp; CO. | Effective Date: November 2026</p>
-        <p>CSTECH SURVEY &amp; CO. is committed to providing quality surveying instruments and professional equipment, including GNSS Receivers, DGPS, Total Stations and Auto Levels.</p>
-        <p>We strive to ensure customer satisfaction through transparent sales practices, reliable product support and responsible after-sales service.</p>
-        <p>This policy outlines the terms and procedures applicable to order cancellations, product returns, replacements, refunds and warranty claims for products purchased from CSTECH SURVEY &amp; CO.</p>
+        <span class="policy-label">WEBSITE LEGAL POLICY</span>
+
+<h2>CANCELLATION, RETURN, REFUND &amp; WARRANTY POLICY</h2>
+
+<p class="policy-company">CSTECH SURVEY &amp; CO.</p>
+
+<p class="terms-date policy-effective">
+    Effective Date: 26 November 2026
+</p>
+       
       </div>
       <div class="terms-section">
         <h2><span>01.</span> Order Cancellation</h2>
@@ -283,97 +658,131 @@
 
 
 
+<!-- =========================================
+     FOOTER
+========================================= -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <!-- SAME FOOTER AS TERMS & CONDITIONS -->
-  <footer class="tc-footer">
-    <div class="tc-footer-container">
-      <div class="tc-footer-grid">
-        <div class="tc-footer-about">
-          <a href="/index.html"><img class="tc-footer-logo" src="https://res.cloudinary.com/shubhamchaicode/image/upload/v1794562849/cstech-logo.png_qzahqj.jpg" alt="CSTECH SURVEY & CO."></a>
-          <p>CSTECH Survey & Co. provides professional surveying, geospatial and GNSS equipment solutions for surveyors, engineers and infrastructure professionals.</p>
-          <div class="tc-footer-social">
-            <a href="https://www.instagram.com/cstech_survey_india/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:info@cstechsurvey.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light" style="margin-top: 0; margin-bottom: -120px;">
+        <div class="fixed-shape">
+            <img src="assets/img/footermap.svg" alt="Shape">
         </div>
-        <div><h3>Quick Links</h3><ul class="tc-footer-links">
-          <li><a href="/index.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/products.html">Our Products</a></li><li><a href="/industries.html">Industries</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/contact.html">Contact Us</a></li>
-        </ul></div>
-        <div><h3>Our Products</h3><ul class="tc-footer-links">
-          <li><a href="/products.html">GNSS Receivers</a></li><li><a href="/products.html">Total Stations</a></li><li><a href="/products.html">Auto Levels</a></li><li><a href="/products.html">Survey Controllers</a></li><li><a href="/products.html">Survey Accessories</a></li><li><a href="/products.html">Survey Drones</a></li>
-        </ul></div>
-        <div class="tc-footer-contact"><h3>Contact Information</h3>
-          <p><i class="fa-solid fa-location-dot"></i> &nbsp;821, 8th Floor, Jaina Tower - 1, District Center, Janakpuri West, New Delhi - 110058</p>
-          <p><i class="fa-solid fa-phone"></i> &nbsp;<a href="tel:+919958507176">9958507176</a></p>
-          <p><i class="fa-solid fa-envelope"></i> &nbsp;<a href="mailto:info@cstechsurvey.com">info@cstechsurvey.com</a></p>
-          <p><i class="fa-solid fa-globe"></i> &nbsp;<a href="https://www.cstechsurvey.com">www.cstechsurvey.com</a></p>
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 item">
+                        <div class="f-item about">
+                            <h3>CSTECH SURVEY &amp; CO.</h3>
+                            <p>Established to offer wide range of consulting services with necessary tools &amp; expertise to scale your business</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Company</h4>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="industries.html">Industries</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Products</h4>
+                            <ul>
+                                <li><a href="/products.html?gnss_receiver">GNSS</a></li>
+                                <li><a href="/products.html?total_station">Total Station</a></li>
+                                <li><a href="/products.html?drone">Drone</a></li>
+                                <li><a href="/products.html?controllers_and_tablets">Controllers &amp; Tablets</a></li>
+                                <li><a href="/products.html?gnss_sensor">GNSS Sensors</a></li>
+                                <li><a href="/products.html?gnss_antennas">GNSS Antennas</a></li>
+                                <li><a href="/products.html?optics">Optics</a></li>
+                                <li><a href="/products.html?datalink">Datalink</a></li>
+                                <li><a href="/products.html?accessories">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 item">
+                        <div class="f-item">
+                            <h4 class="widget-title">Contact Info</h4>
+                            <div class="address">
+                                <ul>
+                                    <li><strong>Address:</strong> Unit no - 821, 8th Floor Jaina Tower 1, Janakpuri, District Center, New Delhi - 110058</li>
+                                    <li><strong>Email:</strong> <a href="mailto:sales@cstechsurvey.com">sales@cstechsurvey.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="download">
+                                <h5>Social</h5>
+                                <a href="javascript:void(0)"><i class="fab fa-whatsapp"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-facebook"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="tc-footer-bottom"><p>&copy; <span id="tcCopyrightYear"></span> CSTECH SURVEY &amp; CO. All Rights Reserved.</p>
-        <div class="tc-legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-and-conditions.html">Terms &amp; Conditions</a><a href="/shipping-policy.html" >Shipping Policy</a><a href="/cancellation-return-refund.html" class="active">Cancellation &amp; Refund</a></div>
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+       <!-- Start Footer Bottom -->
+      <div class="footer-bottom">
+     <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+               <div class="footer-bottom">
+    <p>
+        Copyright © 2026. Designed by
+        <a href="index.html">CSTech Survey & Co.</a>
+    </p>
+
+    <div class="footer-policy-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="shipping-policy.html">Shipping Policy</a>
+        <a href="cancellation-return-refund.html">
+            Cancellation, Return & Refund
+        </a>
     </div>
-  </footer>
-  <button class="tc-back-top" id="tcBackTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
 
-  <script src="/assets/js/jquery-3.6.0.min.js"></script>
-  <script src="/assets/js/bootstrap.min.js"></script>
-  <script>
-    const tcMenuToggle = document.getElementById("tcMenuToggle");
-    const tcNavigation = document.getElementById("tcNavigation");
-    tcMenuToggle.addEventListener("click", function () {
-      const isOpen = tcNavigation.classList.toggle("open");
-      tcMenuToggle.setAttribute("aria-expanded", isOpen);
-      tcMenuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-    });
-    tcNavigation.querySelectorAll("a").forEach(function(link){ link.addEventListener("click", function(){ tcNavigation.classList.remove("open"); tcMenuToggle.setAttribute("aria-expanded","false"); tcMenuToggle.innerHTML='<i class="fa-solid fa-bars"></i>'; }); });
-    document.getElementById("tcCopyrightYear").textContent = new Date().getFullYear();
-    const tcBackTop = document.getElementById("tcBackTop");
-    window.addEventListener("scroll", function(){ if(window.scrollY > 350){tcBackTop.classList.add("show");}else{tcBackTop.classList.remove("show");} });
-    tcBackTop.addEventListener("click", function(){ window.scrollTo({top:0,behavior:"smooth"}); });
-    </script>
+
+
+        </div>
+    </div>
+</div>
+<!-- End Footer Bottom -->
+    </footer>
+
+    <!-- Scripts required for the shared website navigation -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/validnavs.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
